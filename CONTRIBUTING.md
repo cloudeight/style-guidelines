@@ -15,7 +15,7 @@ When creating a new issue, use one of the templates provided if there are any. T
 
 ## Pull Requests
 
-The same goes for pull requests, if a pull request template is provided, us that if you can, we also ask that you keep your code, documentation, version control and git commit summary and descriptions to the same standard and structure of the project. There are whole set of best practices and guidelines for various aspects of developing a project which can be found in our companies [style guidelines](https://github.com/cloudeight/style-guidelines) documentation project.
+The same goes for pull requests, if a pull request template is provided, use that if you can, we also ask that you keep your code, documentation, version control and git commit summary and descriptions to the same standard and structure of the project. There are whole set of best practices and guidelines for various aspects of developing a project which can be found in our companies [style guidelines](https://github.com/cloudeight/style-guidelines) documentation project.
 
 We understand that each project is different and may require veering off the guidelines to some extent but we try and keep these guidelines as up to date, useful and relevant as possible.
 
