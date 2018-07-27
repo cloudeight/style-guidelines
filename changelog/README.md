@@ -66,7 +66,7 @@ Bug Fixes
     - Fix overlay bug in legacy browsers
 
 Release Notes
-    - Overlays should no work back to IE9
+    - Overlays should now work back to IE9
 
 v1.1.0
 -------------------------------------------------------------------------------
