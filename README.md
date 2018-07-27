@@ -1,6 +1,6 @@
 # Style Guidelines
 
-> *An undoubtedly debatable guideline to manage code, databases, versioning and more...*
+> *An undoubtedly debatable set of guidelines to manage code, databases, versioning and more...*
 
 ## Documentation
 
