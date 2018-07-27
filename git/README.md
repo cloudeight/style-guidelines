@@ -12,6 +12,7 @@
 3. [Git Commit Fields](#git-commit-fields)
     - [Summary](#summary)
     - [Description](#description)
+    - [Example](#example)
 
 ## Introduction
 
@@ -48,4 +49,23 @@ A summary line is required for each commit made to a git repository and should f
 
 ### Description
 
-The description should follow the [changelog guidelines](../version-control#guidelines) except use the imperative: "Add", "Update", "Remove" and "Fix". This helps maintain consistency with generated commit messages from commands such as "git merge".
+Descriptions may not always be necessary if the summary itself covers the changes made with the commit, but when they are needed they should follow a similar set of guidelines set in the [changelog](../version-control#guidelines) section.
+
+The first line should be the same as the summary and treated as the subject, with a set of bullet points treated as the body that detail each change. The subject and body should be separated with a blank line.
+
+### Example
+
+```
+Summary
+--------------------------------------------------------------------------------
+Update README.md
+
+Description
+--------------------------------------------------------------------------------
+Update README.md
+
+- Add project description
+- Add install instructions
+- Update credits and attributions
+- Fix typo
+```
