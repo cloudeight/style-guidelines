@@ -15,6 +15,8 @@ Use the following links to read up on their respective style guidelines:
   - ~~[PHP](./php)~~
   - ~~[Shell](./shell)~~
   - [Version Control](./version-control)
+  
+  *More styleguides will be added shortly...*
 
 ## Team
 
