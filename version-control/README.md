@@ -95,9 +95,11 @@ Beta builds ***can*** be publicly available on dependency package managers such 
 
 All beta builds should always contain the hyphen beta suffix and start like so: `0.1.0-beta`
 
-During this stage of the development process, the project is still updated heavily and rapidly but unlike alpha builds the major, minor and patch version components are now increased and the alpha build number is dropped, like so:
+During this stage of the development process, the project is still updated heavily and rapidly but unlike alpha builds the minor and patch version components are now increased and the alpha build number is dropped, like so:
 
 `0.1.9-beta` -> `0.1.10-beta` -> `0.1.11-beta` -> `0.2.0-beta` -> `0.2.1-beta`
+
+However, even with code breaking changes or backwards compatibility issues in an update, the major version component must **never** be increased in a beta build as this signals the start of a stable release. This is because although minor versions may contain code breaking changes and cause backwards compatibility issues, this is expected in a beta build.
 
 ### Stable Release
 
@@ -105,4 +107,4 @@ A project is available as a stable release once all known bugs and security issu
 
 Alpha and beta suffixes and build numbers are now removed from the version number and the version number is bumped to `1.0.0`.
 
-Stable releases can now be publicly available on dependency package managers such as [npm](https://www.npmjs.com/), [yarn](https://yarnpkg.com/) or [composer](https://getcomposer.org/) etc if required and version numbering should follow the [rules](#rules) listed above.
+Stable releases can now be publicly available on dependcy package managers such as [npm](https://www.npmjs.com/), [yarn](https://yarnpkg.com/) or [composer](https://getcomposer.org/) etc if required and version numbering should follow the [rules](#rules) listed above.
