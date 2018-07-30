@@ -107,4 +107,4 @@ A project is available as a stable release once all known bugs and security issu
 
 Alpha and beta suffixes and build numbers are now removed from the version number and the version number is bumped to `1.0.0`.
 
-Stable releases can now be publicly available on dependcy package managers such as [npm](https://www.npmjs.com/), [yarn](https://yarnpkg.com/) or [composer](https://getcomposer.org/) etc if required and version numbering should follow the [rules](#rules) listed above.
+Stable releases can now be publicly available on dependency package managers such as [npm](https://www.npmjs.com/), [yarn](https://yarnpkg.com/) or [composer](https://getcomposer.org/) etc if required and version numbering should follow the [rules](#rules) listed above.
