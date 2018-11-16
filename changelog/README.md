@@ -2,6 +2,7 @@
 *An undoubtedly debatable guideline to changelogs...*
 <br />
 
+
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Changelog](#changelog)
