@@ -1,5 +1,6 @@
 # Style Guidelines
 > *An set of guidelines to manage code, databases, versioning and more.*
+<br />
 
 
 ## Documentation
