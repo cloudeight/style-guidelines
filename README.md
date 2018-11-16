@@ -6,7 +6,7 @@
 ## Documentation
 Use the following links to read up on their respective style guidelines:
   - [Changelog](./changelog)
-  - ~~[CSS](./css)~~
+  - [CSS](./css)
   - ~~[Databases](./databases)~~
   - [Git](./git)
   - ~~[HTML and Templating](./html)~~
