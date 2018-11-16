@@ -1,5 +1,5 @@
 # Style Guidelines: Git
-> *An undoubtedly debatable guideline to git...*
+> *A set of guidelines to git.*
 <br />
 
 
@@ -12,7 +12,7 @@
 3. [Git Commit Fields](#git-commit-fields)
     - [Summary](#summary)
     - [Description](#description)
-    - [Example](#example)
+4. [Example](#example)
 
 
 ## Introduction
@@ -21,6 +21,7 @@ This is a style guideline for documenting a git commit summary and description t
 It is in no way perfect or the definitively correct way to document your projects git commit summary and description and we're always happy for insights, feedback, improvements and recommendations to help improve it!
 
 Some projects written before this guideline may not follow it entirely or at all and there may be times when projects follow their own guidelines due to special use cases. Of course, these guidelines may be updated as and when needed.
+
 
 ## Best Practices
 ### Concise Commits
@@ -46,7 +47,7 @@ Descriptions may not always be necessary if the summary itself covers the change
 The first line should be the same as the summary and treated as the subject, with a set of bullet points treated as the body that detail each change. The subject and body should be separated with a blank line.
 
 
-### Example
+## Example
 ```
 Summary
 --------------------------------------------------------------------------------
