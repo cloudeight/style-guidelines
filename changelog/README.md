@@ -1,5 +1,5 @@
 # Style Guidelines: Changelog
-*An undoubtedly debatable guideline to changelogs...*
+> *An undoubtedly debatable guideline to changelogs...*
 <br />
 
 
