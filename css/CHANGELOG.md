@@ -9,7 +9,7 @@
 ### Removed
 - Remove CSS anatomy
 
-### Fixes
+### Fixed
 - Fix typos
 
 
