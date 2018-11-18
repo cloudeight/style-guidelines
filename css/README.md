@@ -13,11 +13,13 @@
     - [Multi-line Property Values](#multi-line-property-values)
 5. [Naming Conventions](#naming-conventions)
     - [BEM](#bem)
-    - [State Hooks](#state-hooks)
-    - [JavaScript Hooks](#javascript-hooks)
-    - [Sizes](#sizes)
-    - [Colors](#colors)
-    - [Feedback](#feedback)
+    - [Hooks](#hooks)
+        - [State Hooks](#state-hooks)
+        - [JavaScript Hooks](#javascript-hooks)
+    - [Modifiers](#modifiers)
+        - [Size Modifiers](#size-modifiers)
+        - [Color Modifiers](#color-modifiers)
+        - [Feedback Modifiers](#feedback-modifiers)
 6. [SASS](#sass)
     - [Variables](#variables)
     - [Maps](#maps)
@@ -66,7 +68,7 @@ This means any number of developers can work within a stylesheet and have a good
 
 ## Syntax and Formatting
 ### Fundamentals
-Looking at the anatomy of a CSS ruleset above, these are the main fundamental rules they should:
+In it's simplsitc form a CSS ruleset should:
 
 - Use four (4) space indents (no tabs)
 - Use 100 characters max
@@ -111,7 +113,7 @@ There are of course more than the basic selector, property/value declarations. T
 - Have any comma separated values separated with a single space
 - Have no padded spaces in parentheses
 
-**Good (Pseudo Class):**
+**Good:**
 
 ```css
 .selector-1:first-child {
@@ -119,9 +121,13 @@ There are of course more than the basic selector, property/value declarations. T
     color: hsla(0, 100%, 50%, 1);
     opacity: 0.5;
 }
+
+.selector-1::before {
+    content: 'I am a pseudo element!';
+}
 ```
 
-**Bad (Pseudo Class):**
+**Bad:**
 
 ```css
 .selector-1:first-child {
@@ -129,26 +135,14 @@ There are of course more than the basic selector, property/value declarations. T
     color: hsla( 0,100%,50%,1 );
     opacity: .5;
 }
-```
 
-**Good (Pseudo Element):**
-
-```css
-.selector-1::before {
-    content: 'I am a pseudo element!';
-}
-```
-
-**Bad (Pseudo Element):**
-
-```css
 .selector-1:before {
     content: "I am a pseudo element!";
 }
 ```
 
 ### Shorthand vs Longhand
-Using shorthand or longhand is dependant on what property you wish to declare. For example, declaring each individual value of an elements padding using each longhand property doesn't make sense when you can declare it with one shorthand property.
+Using shorthand or longhand is dependent on what property you wish to declare. For example, declaring each individual value of an elements padding using individual longhand property doesn't make sense when you can declare it with one shorthand property.
 
 **Good:**
 
@@ -189,7 +183,7 @@ The same goes for declaring each sides' padding in the shorthand. Declaring each
 
 Basically, the shorthand/longhand rule is more dependant on the situation. For example, when declaring a background color it makes sense to use the longhand `background-color` over the shorthand `background`.
 
-If we have previously declared a background image on our selector:
+If we have previously declared a background image on our selector, like so:
 
 ```css
 .selector {
@@ -197,7 +191,7 @@ If we have previously declared a background image on our selector:
 }
 ```
 
-We could potentially overwrite the previously declared background image if we are not careful:
+We could potentially overwrite the previously declared background image if we are not careful, for example:
 
 **Good:**
 
@@ -217,7 +211,7 @@ We could potentially overwrite the previously declared background image if we ar
 
 
 ### Multi-line Property Values
-Some properties allow for multiple value declarations, such as box shadows. For multi-line values there are additional rules where the ruleset should:
+Some properties allow for multiple value declarations, such as box shadows. Since this can become quite messy, we can separate each value to a new line, multi-line property values should:
 
 - Have each value on a new line
 - Have each value indented to the same level as the first value
@@ -244,7 +238,7 @@ Some properties allow for multiple value declarations, such as box shadows. For 
 }
 ```
 
-There may also be times when it is more readable to declare shorthand values on multiple lines too. For example, if we have 4 variables that declare the radius of each corner of an element, we could declare them on multiple lines to make the stylesheet more coherent. This sort of practice also helps keep within our 100 character rule.
+There may also be times when you could declare shorthand values on multiple lines too. For example, if we are using SASS, we could have 4 variables that declare the radius of each corner of an element, like so:
 
 **Good:**
 
@@ -267,7 +261,7 @@ There may also be times when it is more readable to declare shorthand values on 
 
 
 ## Naming Conventions
-Naming conventions are also extremely important and we should always ensure that classes and variable names are meaningful and coherent.
+Naming conventions are also extremely important and we should always ensure that class names, SASS variables, mixins and function names are meaningful and coherent too.
 
 ### BEM
 >"Block Element Modifier is a methodology that helps you to create reusable components and code sharing in front-end development"
@@ -288,19 +282,19 @@ All class naming conventions should:
 
 ```css
 .card-block {}
-.card-block--modifier {}
 .card-block__element {}
+.card-block--modifier {}
 ```
 
 **Bad:**
 
 ```css
 .CardComponent {}
-.CardComponent_Modifier {}
 .CardComponent_Element {}
+.CardComponent_Modifier {}
 ```
 
-Following on with the BEM methodology and structuring, block element descendants should not chain their parent elements in their name. Each block element is its' own element and each name should only contain one (1) set of double underscores `__` and one (1) set of double hyphens `--`.
+Following on with the BEM methodology and structuring, block element descendants should not chain their parent elements in their own name. Each block element is its' own element and each name should only contain one (1) set of double underscores `__` and one (1) set of double hyphens `--`.
 
 **Good:**
 
@@ -318,8 +312,9 @@ Following on with the BEM methodology and structuring, block element descendants
 .block__head__heading {}
 ```
 
-### State Hooks
-State hooks are modifier classes that declare an element or components state, they can be prefixed with either the `is-` or `has-` namespace depending on the state the element is in and the tense you would speak it:
+### Hooks
+#### State Hooks
+State hooks are modifier classes that declare an element or components state, they can be prefixed with either the `is-` or `has-` namespace depending on the state the element is in:
 
 - A link may be in an active state: `is-active`
 - An accordion item element may be in an expanded state: `is-expanded`
@@ -328,7 +323,7 @@ State hooks are modifier classes that declare an element or components state, th
 - A slider element may have content loaded: `has-loaded`
 - A input element may contain an error: `has-error`
 
-### JavaScript Hooks
+#### JavaScript Hooks
 JavaScript hooks are classes that are used to trigger a script, they contain no styling and must always be prefixed with the `js-` namespace and scoped to the component it is attached to and suffixed with the action it takes:
 
 - A panel component that can be toggled: `js-panel-toggle`
@@ -336,20 +331,12 @@ JavaScript hooks are classes that are used to trigger a script, they contain no 
 - A modal component that can be closed: `js-modal-close`
 - A dropdown element that can be triggered: `js-dropdown-trigger`
 
-### Sizes
-When declaring size modifier classes, along with the default declarations you may wish to decrease or increase the property values, try and stick to these naming conventions for sizing components and elements:
+### Modifiers
 
-- Tiny
-- Small
-- Large
-- Huge
+Modifier classes should always be declared using the [BEM](#bem) methodology and structuring, except for [size](#size-modifiers), [color](#color-modifiers) and [feedback](#feedback-modifiers) modifiers. These type of modifiers should be declared in a similar fashion to [state hooks](#state-hooks). The reason for declaring these like state hook modifiers rather than component/BEM modifiers is that these modifiers are universal and would appear throughout various elements and components, it keeps the naming conventions, consistent, structured and easily readable.
 
-However, there may be cases where components and elements need even smaller or bigger styles, if so you can use the following:
-
-- Micro
-- Mega
-
-Use these naming conventions as state hook modifiers like so:
+#### Size Modifiers
+When declaring component and element size modifiers, we recommend using these naming conventions:
 
 ```css
 .selector.is-micro {}
@@ -360,10 +347,8 @@ Use these naming conventions as state hook modifiers like so:
 .selector.is-mega {}
 ```
 
-The reason for declaring them as state hook modifiers rather than BEM modifiers is these modifiers are universal and would appear throughout various elements and components, it keeps the naming conventions structured and easily readable.
-
-### Colors
-Similar to sizes, use these modifier classes as state hook modifiers too, this can include base colors, primary and secondary colors, for example:
+#### Color Modifiers
+When declaring component and element color modifiers, we recommend using these naming conventions:
 
 ```css
 .selector.is-charcoal {}
@@ -372,15 +357,8 @@ Similar to sizes, use these modifier classes as state hook modifiers too, this c
 .selector.is-secondary {}
 ```
 
-### Feedback
-Feedback naming conventions include:
-
-- Info
-- Success
-- Warning
-- Error
-
-Just like colors, use these modifier classes as state hook modifiers but with the `has-` prefix, like so:
+#### Feedback Modifiers
+Unlike [size modifiers](#size-modifiers) and [color modifiers](#color-modifiers), feedback modifiers should use the `has-` prefix. When declaring component and element feedback modifiers, we recommend using these naming conventions:
 
 ```css
 .selector.has-info {}
@@ -389,13 +367,11 @@ Just like colors, use these modifier classes as state hook modifiers but with th
 .selector.has-error {}
 ```
 
-
-
 ## SASS
-Since we use SASS in all of our projects and given the popularity of SASS, there are guidelines that we wish to include in our CSS guidelines, without trying to showcase the functionality or features of SASS, here is how we best place SASS in our CSS in the most compatible way, following the above guidelines.
+Since we use SASS in all of our projects and given the popularity of SASS, there are guidelines that we wish to include in our CSS guidelines, here is how we best try to seamlessly place SASS in our CSS stylesheet, while following the above guidelines.
 
 ### Variables
-SASS variables do not need to follow that of the BEM methodology and structuring, but should:
+SASS variables do not need to follow that of the [BEM](#bem) methodology and structuring, but should:
 
 - Use lowercase
 - Use hyphen delimiters
@@ -404,13 +380,14 @@ SASS variables do not need to follow that of the BEM methodology and structuring
 - Be prefixed with the component name they are attached to
 - Have no space before the variable name colon
 - Have a single space after the variable name colon
+- Have a single space before a flag (if used)
 - Have a trailing semi-colon at the end of the value
 
 **Good:**
 
 ```scss
 $component-background-color: hsla(0, 100%, 100%, 1);
-$component-width: 500px;
+$component-width: 500px !default;
 
 .selector {
     background-color: $component-background-color;
@@ -422,7 +399,7 @@ $component-width: 500px;
 
 ```scss
 .selector {
-    $ComponentWidth : 500px;
+    $ComponentWidth : 500px!default;
     $ComponentBackgroundColor:hsla(0, 100%, 100%, 1);
 
     background-color: $ComponentBackgroundColor;
@@ -431,15 +408,14 @@ $component-width: 500px;
 ```
 
 ### Maps
-Maps are very similar to variables in their naming conventions and structuring, except they allow for key value pairs rather than a single value, they should follow everything mentioned in the SASS [variables](#variables), but should:
+Maps are very similar to SASS [variables](#variables) in their naming conventions and structuring, except they allow for key value pairs rather than a single value, they follow the same guidelines as variables, but should:
 
 - Have the opening parentheses on the same line as the variable/map name
 - Have a single space before the opening parentheses
 - Have each declaration on a new line
-- Use lowercase for key property names
 - Have key properties wrapped in single quotes
 - Have no space before a key property colon
-- Use single space after a key property colon
+- Have a single space after a key property colon
 - Have no trailing comma on the last key value pair
 - Have the closing parentheses on a new line
 - Have a trailing semi-colon after the closing parentheses
@@ -450,7 +426,7 @@ Maps are very similar to variables in their naming conventions and structuring, 
 $colors: (
     'primary': hsla(0, 100%, 100%, 1),
     'secondary': hsla(0, 100%, 0%, 1)
-);
+) !default;
 ```
 
 **Bad:**
@@ -459,11 +435,11 @@ $colors:
 (
     primary:hsla(0, 100%, 100%, 1),
     secondary : hsla(0, 100%, 0%, 1),
-);
+)!default;
 ```
 
 ### Mixins and Functions
-Like SASS variables, mixins and functions do not need to follow that of the BEM methodology and structuring, but should:
+Like SASS [variables](#variables), mixins and functions do not need to follow that of the [BEM](#bem) methodology and structuring either, but should:
 
 - Use lowercase
 - Use hyphen delimiters
@@ -473,11 +449,11 @@ Like SASS variables, mixins and functions do not need to follow that of the BEM 
 - Have any comma separated argument values separated with a single space
 - Have no space before an argument default value colon
 - Have a single space after an argument default value colon
-- Have the opening brace on the same line as the mixin name and argument parentheses parentheses
+- Have the opening brace on the same line as the mixin name and argument parentheses
 - Have a single space before the opening brace
 - Have the closing brace on a new line
 
-**Good (Mixin):**
+**Good**
 
 ```scss
 @mixin border-radius($top-left: 0, $top-right: 0, $bottom-right: 0, $bottom-left: 0) {
@@ -486,28 +462,20 @@ Like SASS variables, mixins and functions do not need to follow that of the BEM 
                    $bottom-right
                    $bottom-left;
 }
+
+@function set-font-color($background-color) {
+    // Function code...
+}
 ```
 
-**Bad (Mixin):**
+**Bad:**
 
 ```scss
 @mixin BorderRadius( $top-left:0, $top-right:0, $bottom-right:0, $bottom-left:0 )
 {
     border-radius:$top-left $top-right $bottom-right $bottom-left;
 }
-```
 
-**Good (Function):**
-
-```scss
-@function set-font-color($background-color) {
-    // Function code...
-}
-```
-
-**Bad (Function):**
-
-```scss
 @function setFontColor( $background-color )
 {
     // Function code...
@@ -515,7 +483,7 @@ Like SASS variables, mixins and functions do not need to follow that of the BEM 
 ```
 
 ### Declaration Order
-As mentioned above, here is how we best place SASS in our CSS in the most compatible way, the declaration order of SASS and CSS should be as followed:
+As mentioned above, we are trying to incorporate SASS within our CSS stylesheet in the most seamless and compatible way, the declaration order of SASS and CSS should be as followed:
 
 - Extend calls `@extend`
 - Mixin calls `@include` (with no `@content`)
@@ -523,6 +491,9 @@ As mentioned above, here is how we best place SASS in our CSS in the most compat
 - Pseudo classes
 - Pseudo elements
 - State hooks
+- Size modifiers/hooks
+- Color modifiers/hooks
+- Feedback modifiers/hooks
 - Modifiers
 - Nested selectors
 - Mixin calls `@include` (with `@content`)
@@ -537,13 +508,12 @@ As mentioned above, here is how we best place SASS in our CSS in the most compat
     color: hsla(0, 100%, 100%, 1);
 
     &:first-child {}
-
     &::before {}
-
     &.is-active {}
-
+    &.is-small {}
+    &.is-primary {}
+    &.has-error {}
     &.selector--modifier {}
-
     .selector__element {}
 }
 ```
@@ -558,13 +528,12 @@ As mentioned above, here is how we best place SASS in our CSS in the most compat
     @extend .element;
 
     .selector__element {}
-
+    &.has-error {}
     &::before {}
-
     &:first-child {}
-
+    &.is-small {}
     &.selector--modifier {}
-
+    &.is-primary {}
     &.is-active {}
 }
 ```
@@ -574,8 +543,9 @@ SASS has the ability to calculate if/else conditional statements, they should:
 
 - Have a single space before the opening parentheses
 - Have no padded spaces in parentheses
-- Have the opening/extending else brace on the same line as the if/else keywords
+- Have the opening brace on the same line
 - Have the closing brace on a new line
+- Have the else key word on the same line as the closing and opening brace
 
 **Good:**
 
@@ -601,13 +571,13 @@ SASS has the ability to calculate if/else conditional statements, they should:
 ```
 
 ### Partials
-Since we can easily import files within our SASS stylesheets when we compile to CSS, we should always aim to break individual components and sections into their respective files and folders. This helps keep our code separated and easily maintained.
+Since we can easily import files within our SASS stylesheets when we compile to CSS, we should always aim to break individual components and sections into their respective files and folders.
 
 
 ## Commenting
 You may of noticed that none of the examples above have any form of comments in them, this is intended as to not clutter the examples shown. However, we should always ensure that our files are well documented and should be aiming to:
 
-- Break code into sections with headings within a single stylesheet
+- Break code into sections with headings within a single stylesheet if required
 - Use DocBlocks, single line and inline comments for their correct purpose
 
 ### Headings
@@ -616,7 +586,7 @@ All of our stylesheets should include a heading or as mentioned above, individua
 - Have two (2) empty lines above
     - Unless it is the first heading of the stylesheet
 - Open with one (1) forward slash, one (1) asterisk, two (2) spaces and ninety two (92) equals signs
-	- Leaving 4 spaces at the end of the 100 character limit
+    - Leaving 4 spaces at the end for the 100 character limit
 - Have the heading text on a new line
 - Have four (4) spaces before the heading text
 - Have capitalised heading text
@@ -625,6 +595,7 @@ All of our stylesheets should include a heading or as mentioned above, individua
 - Have a space either side of breadcrumb delimiters
 - Close on a new line
 - Close with four (4) spaces, ninety two (92) equals signs, two (2) spaces, one (1) asterisk and one (1) forward slash
+    - Using the 100 character limit
 - Have one (1) empty line below
 
 **Example:**
@@ -648,13 +619,13 @@ $notice-border-style: solid;
     ============================================================================================  */
 
 .notice {
-	background-color: $notice-background-color:
-	border: 0 $notice-border-style $notice-border-color;
-	border-bottom-width: $notice-border-bottom-width;
-	border-left-width: $notice-border-left-width;
-	border-right-width: $notice-border-right-width;
-	border-right-width: $notice-border-top-width;
-	color: $notice-font-color;
+    background-color: $notice-background-color:
+    border: 0 $notice-border-style $notice-border-color;
+    border-bottom-width: $notice-border-bottom-width;
+    border-left-width: $notice-border-left-width;
+    border-right-width: $notice-border-right-width;
+    border-right-width: $notice-border-top-width;
+    color: $notice-font-color;
 }
 ```
 
@@ -664,6 +635,7 @@ Inline comments should be used after things such as a CSS property value declara
 
 - Start on the same line as the subject matter
 - Start with two (2) forward slashes
+- Have a single space before the forward slashes
 - Have a single space after the forward slashes
 - Have a capitalised first letter
 - Always be on one line
@@ -672,30 +644,31 @@ Inline comments should be used after things such as a CSS property value declara
 **Good:**
 ```css
 .selector {
-	width: 100%; // Make the element responsive
+    width: 100%; // Make the element responsive
 }
 ```
 
 **Bad:**
 ```css
 .selector {
-	width: 100%;//responsive
+    width: 100%;//responsive
 }
 ```
 
+For more on inline comments and what to do when multiple inline comments are repeated within a CSS ruleset or if the inline comment exceeds the 100 character limit, read [number labels](#number-labels).
 
 ### DocBlocks
 #### Basics
 A DocBlock comment is used when a detailed description or explanation is needed, their format should:
 
-- Open with one (1) forward slash followed by two (2) asterisk
+- Open with one (1) forward slash and two (2) asterisk
 - Have the first line of text on a new line
 - Have each new line start with one (1) space, one (1) asterisk and two (2) spaces before the line of text
 - Have each line of text wrap before the 100 character limit
 - Have a capitalised first letter for descriptions
 - Have a full stop at the end of descriptions
 - Close on a new line
-- Close with one (1) space, one (1) single asterisk followed by one (1) forward slash
+- Close with one (1) space, one (1) single asterisk and one (1) forward slash
 
 **Good:**
 
@@ -704,6 +677,7 @@ A DocBlock comment is used when a detailed description or explanation is needed,
  *  Notice components should be used to showcase dismissible feedback to a user
  *  such as information, success, warning or error messages.
  */
+.notice {}
 ```
 
 **Bad:**
@@ -711,6 +685,8 @@ A DocBlock comment is used when a detailed description or explanation is needed,
 ```css
 /* notice components should be used to showcase dismissible feedback to a user
 * such as information, success, warning or error messages */
+
+.notice {}
 ```
 
 #### Reference Subjects
@@ -723,6 +699,8 @@ DocBlocks can also include references to demos, authors as well as crediting peo
 
 Reference subjects should:
 
+- Have an empty line above
+    - Unless it is the first line of a block
 - Be on a new line
 - Have the first letter of the reference text inline with one another
 
@@ -731,14 +709,12 @@ Reference subjects should:
 ```css
 /**
  *  Notice component description.
+ *  
  *  @demo    http://www.example.com/notice/demo
  *  @author  Joe Mottershaw <https://www.github.com/joemottershaw>
  *  @version 0.1.0
  */
-.notice {
-	.notice__text {}
-	.notice__remove {}
-}
+.notice {}
 ```
 
 **Bad:**
@@ -750,10 +726,7 @@ Reference subjects should:
  *  @author Joe Mottershaw <https://www.github.com/joemottershaw>
  *  @version 0.1.0
  */
-.notice {
-	.notice__text {}
-	.notice__remove {}
-}
+.notice {}
 ```
 
 
@@ -798,7 +771,7 @@ When combining either of the SASS annotations, `{type}`, `$paramater` and the an
 - Use `{mixed}` for return types if different values could be returned
 - Use `{void}` for return types where nothing is returned
 
-**Good (Mixin):**
+**Good:**
 
 ```scss
 /**
@@ -807,24 +780,7 @@ When combining either of the SASS annotations, `{type}`, `$paramater` and the an
  *  @param  {mixed}  $second  The second description.
  *  @output                   The output description.
  */
-@mixin name($first, $second) {}
-```
 
-**Bad (Mixin):**
-
-```scss
-/**
- *  Mixin description.
- *  @param {int} $first The first description
- *  @param {mixed} $second The second description
- *  @output The output description
- */
-@mixin name($first, $second) {}
-```
-
-**Good (Function):**
-
-```scss
 /**
  *  Function description.
  *  @param  {int}     $first   The first description.
@@ -833,9 +789,16 @@ When combining either of the SASS annotations, `{type}`, `$paramater` and the an
  */
 ```
 
-**Bad (Function):**
+**Bad:**
 
 ```scss
+/**
+ *  Mixin description.
+ *  @param {int} $first The first description
+ *  @param {mixed} $second The second description
+ *  @output The output description
+ */
+
 /**
  *  Function description.
  *  @param {int} $first The first description
@@ -845,17 +808,17 @@ When combining either of the SASS annotations, `{type}`, `$paramater` and the an
 ```
 
 #### Number Labels
-Number labels are used when [inline comments](#inline) would need to be repeated or if an inline comment surpasses the 100 character limit. They should follow the same structure as inline comments and should also:
+Number labels are used when [inline comments](#inline) would need to be repeated or if an inline comment exceeds the 100 character limit. They should follow the same structure as inline comments and should also:
 
 - Have the label wrapped in square brackets
 - Have no padded spaces in square brackets
 
-Use DocBlocks to declare each number and their respective comments, they should:
+Use [DocBlocks](#docblocks) to declare each number and their respective comments, they should:
 
 - Start on a new line
-- Use the number followed by a full stop
+- Use a number followed by a full stop
+- Have one (1) space before the number label text
 - Have a capitalised first letter for the number label text
-- Have one (1) space between the full stop and number label text
 
 **Good:**
 
