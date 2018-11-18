@@ -5,13 +5,12 @@
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Foundation](#foundation)
-3. [Anatomy](#anatomy)
-4. [Syntax and Formatting](#syntax-and-formatting)
+3. [Syntax and Formatting](#syntax-and-formatting)
     - [Fundamentals](#fundamentals)
     - [Extended](#extended)
     - [Shorthand vs Longhand](#shorthand-vs-longhand)
     - [Multi-line Property Values](#multi-line-property-values)
-5. [Naming Conventions](#naming-conventions)
+4. [Naming Conventions](#naming-conventions)
     - [BEM](#bem)
     - [Hooks](#hooks)
         - [State Hooks](#state-hooks)
@@ -20,14 +19,14 @@
         - [Size Modifiers](#size-modifiers)
         - [Color Modifiers](#color-modifiers)
         - [Feedback Modifiers](#feedback-modifiers)
-6. [SASS](#sass)
+5. [SASS](#sass)
     - [Variables](#variables)
     - [Maps](#maps)
     - [Mixins and Functions](#mixins-and-functions)
     - [Declaration Order](#declaration-order)
     - [Conditional Statements](#conditional-statements)
     - [Partials](#partials)
-7. [Commenting](#commenting)
+6. [Commenting](#commenting)
     - [Headings](#headings)
     - [Inline](#inline)
     - [DocBlocks](#docblocks)
@@ -37,7 +36,7 @@
         - [Number Labels](#number-labels)
         - [Ordering](#ordering)
     - [Single Line](#single-line)
-8. [Attributions](#attributions)
+7. [Attributions](#attributions)
 
 
 ## Introduction
@@ -58,13 +57,6 @@ When working on projects, large or small, it is important to work to a set of gu
 
 This means any number of developers can work within a stylesheet and have a good understanding of what they are working with and without the worry of disrupting the flow of development.
 
-
-## Anatomy
-```
-[selector] {
-    [property]: [value];
-}
-```
 
 ## Syntax and Formatting
 ### Fundamentals
