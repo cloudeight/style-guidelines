@@ -1,3 +1,4 @@
+
 # Style Guidelines: CSS
 > *A set of guidelines to CSS.*
 <br />
@@ -691,9 +692,9 @@ DocBlocks can also include references to demos, authors as well as crediting peo
 
 Reference subjects should:
 
-- Have an empty line above
+- Have an empty line above the first reference subject
     - Unless it is the first line of a block
-- Be on a new line
+- Have each reference on a new line
 - Have the first letter of the reference text inline with one another
 
 **Good:**
@@ -807,7 +808,9 @@ Number labels are used when [inline comments](#inline) would need to be repeated
 
 Use [DocBlocks](#docblocks) to declare each number and their respective comments, they should:
 
-- Start on a new line
+- Have an empty line above the first label
+    - Unless it is the first line of a block
+- Have each label start on a new line
 - Use a number followed by a full stop
 - Have one (1) space before the number label text
 - Have a capitalised first letter for the number label text
@@ -817,6 +820,7 @@ Use [DocBlocks](#docblocks) to declare each number and their respective comments
 ```css
 /**
  *  Some information about this ruleset.
+ *  
  *  1. Make the element responsive
  *  2. Force the element to stack higher
  */
@@ -849,6 +853,7 @@ You should never mix inline and number labels. Once a number label is used, conv
 ```css
 /**
  *  Some information about this ruleset.
+ *  
  *  1. Make the element responsive
  *  2. Force the element to stack higher
  */
@@ -864,6 +869,7 @@ You should never mix inline and number labels. Once a number label is used, conv
 ```css
 /**
  *  Some information about this ruleset
+ *  
  *  1. Make the element responsive
  */
 .selector {
@@ -877,19 +883,21 @@ You should never mix inline and number labels. Once a number label is used, conv
 Since there are many levels to a DocBlock depending on what the DocBlock is being used for, the above sections should be ordered as follows:
 
 - Basics
-- Number Ordering
 - SASS Annotations
+- Number Ordering
 - Reference Subjects
 
 **Example:**
 ```scss
 /**
  *  Mixin to make an element responsive and appear higher in the stack index.
- *  1. Make the element responsive
- *  2. Force the element to stack higher
  *  @param  {string}  $width   The element width.
  *  @param  {int}     $zindex  The z-index.
  *  @output                    The responsive property values.
+ *
+ *  1. Make the element responsive
+ *  2. Force the element to stack higher
+ *
  *  @demo    http://www.example.com/mixin/demo
  *  @author  Joe Mottershaw <https://www.github.com/joemottershaw>
  *  @version 0.1.0
