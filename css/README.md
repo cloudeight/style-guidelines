@@ -78,7 +78,6 @@ In it's basic form a CSS ruleset should:
 - Have the closing brace on a new line
 
 **Good:**
-
 ```css
 .selector-1,
 .selector-2 {
@@ -107,7 +106,6 @@ There are of course more than the basic selector, property/value declarations. T
 - Have no padded spaces in parentheses
 
 **Good:**
-
 ```css
 .selector-1:first-child {
     background-image: url('/path/to/image.jpeg');
@@ -121,7 +119,6 @@ There are of course more than the basic selector, property/value declarations. T
 ```
 
 **Bad:**
-
 ```css
 .selector-1:first-child {
     background-image: url( "/path/to/image.jpeg" );
@@ -138,7 +135,6 @@ There are of course more than the basic selector, property/value declarations. T
 Using shorthand or longhand is dependent on what property you wish to declare. For example, declaring each individual value of an elements' padding using individual longhand property doesn't make sense when you can declare it with one shorthand property.
 
 **Good:**
-
 ```css
 .selector {
     padding: 5px;
@@ -146,7 +142,6 @@ Using shorthand or longhand is dependent on what property you wish to declare. F
 ```
 
 **Bad:**
-
 ```css
 .selector {
     padding-bottom: 5px;
@@ -159,7 +154,6 @@ Using shorthand or longhand is dependent on what property you wish to declare. F
 The same goes for declaring each sides' padding in the shorthand property. Declaring each side should be avoided if all values are the same.
 
 **Good:**
-
 ```css
 .selector {
     padding: 5px;
@@ -167,7 +161,6 @@ The same goes for declaring each sides' padding in the shorthand property. Decla
 ```
 
 **Bad:**
-
 ```css
 .selector {
     padding: 5px 5px 5px 5px;
@@ -187,7 +180,6 @@ If we have previously declared a background image on our selector, like so:
 We could potentially overwrite the previously declared background image if we are not careful, for example:
 
 **Good:**
-
 ```css
 .selector {
     background-color: hsla(0, 100%, 100%, 1);
@@ -195,7 +187,6 @@ We could potentially overwrite the previously declared background image if we ar
 ```
 
 **Bad:**
-
 ```css
 .selector {
     background: hsla(0, 100%, 100%, 1);
@@ -210,7 +201,6 @@ Some properties allow for multiple value declarations, such as box shadows. Sinc
 - Have each value indented to the same level as the first value
 
 **Good:**
-
 ```css
 .selector {
     box-shadow: 5px 5px 10px 0 hsla(0, 100%, 0%, 0.2),
@@ -219,7 +209,6 @@ Some properties allow for multiple value declarations, such as box shadows. Sinc
 ```
 
 **Bad:**
-
 ```css
 .selector {
     box-shadow: 5px 5px 10px 0 hsla(0, 100%, 0%, 0.2), -5px -5px 10px 0 hsla(0, 100%, 50%, 0.1);
@@ -234,7 +223,6 @@ Some properties allow for multiple value declarations, such as box shadows. Sinc
 There may also be times when you could declare shorthand values on multiple lines too. For example, if we are using SASS, we could have 4 variables that declare the radius of each corner of an element.
 
 **Good:**
-
 ```css
 .selector {
     border-radius: $border-top-left-radius
@@ -245,7 +233,6 @@ There may also be times when you could declare shorthand values on multiple line
 ```
 
 **Bad:**
-
 ```css
 .selector {
     border-radius: $border-top-left-radius $border-top-right-radius $border-bottom-right-radius $border-bottom-left-radius;
@@ -272,7 +259,6 @@ All class naming conventions should:
 - Use hyphen delimiters
 
 **Good:**
-
 ```css
 .component-block {}
 .component-block__element {}
@@ -280,7 +266,6 @@ All class naming conventions should:
 ```
 
 **Bad:**
-
 ```css
 .Component {}
 .Component_Element {}
@@ -290,7 +275,6 @@ All class naming conventions should:
 Following on with the BEM methodology and structuring, block element descendants should not chain their parent elements in their own name. Each block element is its' own element and each name should only contain one (1) set of double underscores `__` and one (1) set of double hyphens `--`.
 
 **Good:**
-
 ```css
 .block {}
 .block__head {}
@@ -298,7 +282,6 @@ Following on with the BEM methodology and structuring, block element descendants
 ```
 
 **Bad:**
-
 ```css
 .block {}
 .block__head {}
@@ -377,7 +360,6 @@ SASS variables do not need to follow that of the [BEM](#bem) methodology and str
 - Have a trailing semi-colon at the end of the value
 
 **Good:**
-
 ```scss
 $component-background-color: hsla(0, 100%, 100%, 1);
 $component-width: 500px !default;
@@ -389,7 +371,6 @@ $component-width: 500px !default;
 ```
 
 **Bad:**
-
 ```scss
 .selector {
     $ComponentWidth : 500px!default;
@@ -406,7 +387,7 @@ Maps are very similar to SASS [variables](#variables) in their naming convention
 - Have the opening parentheses on the same line as the variable/map name
 - Have a single space before the opening parentheses
 - Have each declaration on a new line
-- Have key properties wrapped in single quotes
+- Use single quotes around the key properties
 - Have no space before a key property colon
 - Have a single space after a key property colon
 - Have no trailing comma on the last key value pair
@@ -414,7 +395,6 @@ Maps are very similar to SASS [variables](#variables) in their naming convention
 - Have a trailing semi-colon after the closing parentheses
 
 **Good:**
-
 ```scss
 $colors: (
     'primary': hsla(0, 100%, 100%, 1),
@@ -447,7 +427,6 @@ Like SASS [variables](#variables) and [maps](#maps), mixins and functions do not
 - Have the closing brace on a new line
 
 **Good**
-
 ```scss
 @mixin border-radius($top-left: 0, $top-right: 0, $bottom-right: 0, $bottom-left: 0) {
     // Mixin code...
@@ -459,7 +438,6 @@ Like SASS [variables](#variables) and [maps](#maps), mixins and functions do not
 ```
 
 **Bad:**
-
 ```scss
 @mixin BorderRadius( $top-left:0, $top-right:0, $bottom-right:0, $bottom-left:0 )
 {
@@ -489,7 +467,6 @@ As mentioned above, we should always try our best to seamlessly place SASS withi
 - Mixin calls `@include` (with `@content`)
 
 **Good:**
-
 ```scss
 .selector {
     @extend .element;
@@ -518,7 +495,6 @@ As mentioned above, we should always try our best to seamlessly place SASS withi
 ```
 
 **Bad:**
-
 ```scss
 .selector {
     @include border-radius(5px);
@@ -558,7 +534,6 @@ SASS has the ability to calculate if/else conditional statements, they should:
 - Have the else key word on the same line as the closing and opening brace
 
 **Good:**
-
 ```scss
 @if (!$variable) {
     // Do something...
@@ -568,7 +543,6 @@ SASS has the ability to calculate if/else conditional statements, they should:
 ```
 
 **Bad:**
-
 ```scss
 @if( ! $variable )
 {
@@ -609,7 +583,6 @@ All of our stylesheets should include a heading or as mentioned above, individua
 - Have one (1) empty line below
 
 **Example:**
-
 ```scss
 /*  ============================================================================================
     APPLICATION -> COMPONENTS -> NOTICE -> VARIABLES
@@ -676,7 +649,6 @@ A DocBlock comment is used when a detailed description or explanation is needed,
 - Close with one (1) space, one (1) single asterisk and one (1) forward slash
 
 **Good:**
-
 ```css
 /**
  *  Notice components should be used to showcase dismissible feedback to a user
@@ -686,7 +658,6 @@ A DocBlock comment is used when a detailed description or explanation is needed,
 ```
 
 **Bad:**
-
 ```css
 /* notice components should be used to showcase dismissible feedback to a user
 * such as information, success, warning or error messages */
@@ -710,7 +681,6 @@ Reference subjects should:
 - Have the first letter of the reference text inline with one another
 
 **Good:**
-
 ```css
 /**
  *  Notice component description.
@@ -723,7 +693,6 @@ Reference subjects should:
 ```
 
 **Bad:**
-
 ```css
 /**
  *  Notice component description.
@@ -738,7 +707,7 @@ Reference subjects should:
 #### SASS Annotations
 DocBlocks can also include annotations for mixins and functions. These are known as SASS annotations with various types of annotation text structures depending on the annotation types. They follow the same structure as [reference subjects](#reference-subjects). Mixin and function annotations are:
 
-**`@param`**
+**`@param`:**
 ```css
 /**
  *  Function/mixin description.
@@ -746,7 +715,7 @@ DocBlocks can also include annotations for mixins and functions. These are known
  */
 ```
 
-**`@output`**
+**`@output`:**
 ```css
 /**
  *  Mixin description.
@@ -754,7 +723,7 @@ DocBlocks can also include annotations for mixins and functions. These are known
  */
 ```
 
-**`@return`**
+**`@return`:**
 ```css
 /**
  *  Function description.
@@ -778,7 +747,6 @@ When combining either of the SASS annotations, `{type}`, `$paramater` and the an
 - Use `{void}` for return types where nothing is returned
 
 **Good:**
-
 ```scss
 /**
  *  Mixin description.
@@ -796,7 +764,6 @@ When combining either of the SASS annotations, `{type}`, `$paramater` and the an
 ```
 
 **Bad:**
-
 ```scss
 /**
  *  Mixin description.
@@ -829,7 +796,6 @@ Use [DocBlocks](#docblocks) to declare each number and their respective comments
 - Have a capitalised first letter for the number label text
 
 **Good:**
-
 ```css
 /**
  *  Some information about this ruleset.
@@ -845,7 +811,6 @@ Use [DocBlocks](#docblocks) to declare each number and their respective comments
 ```
 
 **Bad:**
-
 ```css
 /**
  *  Some information about this ruleset.
@@ -862,7 +827,6 @@ Use [DocBlocks](#docblocks) to declare each number and their respective comments
 You should never mix inline comments and number labels. Once a number label is used, convert all current inline comments for that ruleset to number labels to keep the stylesheet clean and consistent.
 
 **Good:**
-
 ```css
 /**
  *  Some information about this ruleset.
@@ -878,7 +842,6 @@ You should never mix inline comments and number labels. Once a number label is u
 ```
 
 **Bad:**
-
 ```css
 /**
  *  Some information about this ruleset
@@ -926,7 +889,7 @@ Since there are many levels to a DocBlock depending on what the DocBlock is bein
 ### Single Line
 Single line comments are typically used above a declaration, set of variables or if/else statements etc. Single line comments should:
 
-- Have an empty line above
+- Have an empty line above the comment
     - Unless it is the first line of a block
 - Start with two (2) forward slashes
 - Have a single space after the forward slashes
@@ -935,7 +898,6 @@ Single line comments are typically used above a declaration, set of variables or
 - Coherently explain what we are doing
 
 **Good:**
-
 ```scss
 // Set the base colors
 $color-black: hsla(0, 100%, 0%, 1);
@@ -958,7 +920,6 @@ $color-white: hsla(0, 100$, 100%, 1);
 ```
 
 **Bad:**
-
 ```scss
 // Colors
 
