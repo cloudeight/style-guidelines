@@ -1,3 +1,4 @@
+
 # Style Guidelines: HTML and Templates
 > *A set of guidelines to HTML and templates.*
 <br />
@@ -381,6 +382,12 @@ Files names should:
 - Use .html extension
 	- Unless it is a template file then use the correct extension (.twig, .blade.php etc)
 - Have an underscore at the start of the file name for partials
+
+```
+index.html
+template.twig
+_partial.twig
+```
 
 #### Exceptions
 These naming conventions for variables, filters and function names follow the same naming conventions that Twig use. If you are using a different template engine that predominantly uses camelCase for function names for example then try and be consistent with the framework or engine you are using.
