@@ -354,21 +354,21 @@ When using control structures like if statements and for loops, they should:
 Naming conventions are also extremely important and we should always ensure that variables, filters and function names are, consistent, meaningful and coherent.
 
 #### Variables
-When naming our variables we tend to use snake_case:
+When naming variables use snake_case:
 
 ```twig
 {% set custom_variable = 'foo' %}
 ```
 
 #### Filters
-When naming our custom filters we tend to use snake_case:
+When naming custom filters use snake_case:
 
 ```twig
 {{ var|custom_filter('type', 'data') }}
 ```
 
 #### Functions
-When naming our custom functions we tend to use snake_case:
+When naming custom functions use snake_case:
 
 ```twig
 {{ custom_function('type', 'data') }}
