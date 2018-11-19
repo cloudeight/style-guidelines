@@ -1,3 +1,16 @@
+# November 19, 2018
+
+### Updated
+- Update wording
+- Update examples
+
+### Fixed
+- Fix typos
+
+
+-----
+
+
 # November 18, 2018
 
 ### Updated
