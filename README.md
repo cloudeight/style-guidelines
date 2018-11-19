@@ -9,7 +9,7 @@ Use the following links to read up on their respective style guidelines:
   - [CSS](./css)
   - ~~[Databases](./databases)~~
   - [Git](./git)
-  - ~~[HTML and Templating](./html)~~
+  - [HTML and Templates](./html)
   - ~~[JavaScript](./javascript)~~
   - ~~[PHP](./php)~~
   - ~~[Shell](./shell)~~
