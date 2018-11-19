@@ -216,7 +216,7 @@ Variables in their basic form, as mentioned above, output data, they should:
 {{ var.foo }}
 ```
 
-Refer to our [variable](#variables-1) naming conventions for more on naming your variables.
+Refer to our [variable naming conventions](#variables-1) for more on naming your variables.
 
 #### Filters
 Filters allow us to manipulate and format the output of a variable, they should:
@@ -246,26 +246,23 @@ There maybe cases where an array of data can be passed to a filter, when this si
 {{ "I like %this% and %that%."|replace(array) }}
 ```
 
-Refer to our [naming conventions](#naming-conventions) for more on naming custom filters.
+Refer to our [filter naming conventions](#variables-2) for more on naming your custom filters.
 
 ### Functions
 Functions can be used to generate content, they should:
 
 - Have the argument parentheses on the same line as the function name
 - Have no space before the opening parentheses
+- Have no padded spaces in argument parentheses
 - Have any comma separated arguments separated with a single space
 
-
-- Have no padded spaces in argument parentheses
-- Have any comma separated argument values separated with a single space
-- Have no space before an argument default value colon
-- Have a single space after an argument default value colon
-
 ```twig
-{{ date|convert_encoding('UTF-8', 'iso-2022-jp') }}
+{% if date(user.created_at) < date('-2days', 'Europe/London') %}
+    {# Do something... #}
+{% endif %}
 ```
 
-Refer to our [naming conventions](#naming-conventions) for more on naming custom functions.
+Refer to our [function naming conventions](#functions-2) for more on naming your custom functions.
 
 ### Expressions
 Expression tags allow us to set variables, loop through arrays and test conditionals. They should:
@@ -353,22 +350,42 @@ When using control structures like if statements and for loops, they should:
 ```
 
 ### Naming Conventions
+Naming conventions are also extremely important and we should always ensure that variables, filters and function names are, consistent, meaningful and coherent.
+
 #### Variables
-When naming variables we tend to use snake_case, this is the same for JavaScript and PHP, custom filters should use camelCase, this keeps in line with our other style guidelines
+When naming our variables we tend to use snake_case:
 
 ```twig
 {% set custom_variable = 'foo' %}
-
-{% set customVariable = 'foo' %}
 ```
+
 #### Filters
-Some text...
+When naming our custom filters we tend to use snake_case:
+
+```twig
+{{ var|custom_filter('type', 'data') }}
+```
 
 #### Functions
-Some text...
+When naming our custom functions we tend to use snake_case:
 
-#### File Names
-Some text...
+```twig
+{{ custom_function('type', 'data') }}
+```
+
+#### File Names:
+Files names should:
+
+- Use lowercase
+- Use hyphen delimiters
+- Use .html extension
+	- Unless it is a template file then use the correct extension (.twig, .blade.php etc)
+- Have an underscore at the start of the file name for partials
+
+#### Exceptions
+These naming conventions for variables, filters and function names follow the same naming conventions that Twig use. If you are using a different template engine that predominantly uses camelCase for function names for example then try and be consistent with the framework or engine you are using.
+
+Also, take a look at the project you are contributing to, see what naming conventions are being used, ask an already contributing developer for advice, the main point is to be consistent.
 
 
 ## Comments
