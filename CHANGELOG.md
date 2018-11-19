@@ -1,11 +1,3 @@
-# November 19, 2018
-
-### New
-- Add HTML and Templates guidelines
-
-
------
-
 # November 18, 2018
 
 ### Updated
