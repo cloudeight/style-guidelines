@@ -1,3 +1,11 @@
+# November 20, 2018
+
+### New
+- Add vendor prefixes section to syntax and formatting
+
+
+-----
+
 # November 19, 2018
 
 ### Updated
