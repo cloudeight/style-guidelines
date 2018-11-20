@@ -3,6 +3,7 @@
 ### Update
 - Update CSS guidelines
     - Add vendor prefixes section to syntax and formatting
+    - Add file names section to naming conventions
 - Update HTML and Templates guidelines
     - Add form element naming conventions
     - Update naming conventions
