@@ -13,6 +13,10 @@
     - Add form element naming conventions
     - Update naming conventions
     - Update wording
+- Update Version Control guidelines
+    - Add anchor links to alpha and beta build guidelines in exceptions
+    - Update rules wording
+    - Update version number examples
 
 
 -----
