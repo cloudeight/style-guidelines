@@ -2,6 +2,7 @@
 
 ### New
 - Add vendor prefixes section to syntax and formatting
+- Add file names section to naming conventions
 
 
 -----
