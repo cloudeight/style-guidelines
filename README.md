@@ -13,6 +13,7 @@ Use the following links to read up on their respective style guidelines:
   - ~~[JavaScript](./javascript)~~
   - ~~[PHP](./php)~~
   - ~~[Shell](./shell)~~
+  - ~~[SQL](./sql)~~
   - [Version Control](./version-control)
 
 
