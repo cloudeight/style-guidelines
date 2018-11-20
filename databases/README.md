@@ -29,10 +29,10 @@ Some projects written before this guideline may not follow it entirely or at all
 ## Character Encoding
 This isn't a guideline for the general public to follow unless you wish to, this is more of a reference for [cloudeight](https://github.com/cloudeight) in-house projects. Here at [cloudeight](https://github.com/cloudeight) we predominantly use the following:
 
-- Character Set: utf8mb4
-- Collation: utf8mb4_unicode_ci
+- Character Set: `utf8mb4`
+- Collation: `utf8mb4_unicode_ci`
 
-Obviously this can be adjusted on a per project basis but is a good starting point.
+Obviously this can be adjusted on a per project basis but it is a good starting point.
 
 
 ## Naming Conventions
@@ -70,9 +70,6 @@ first_name
 
 // Date of birth
 date_of_birth
-
-// Created at
-created_at
 ```
 
 ### Primary Keys
@@ -144,8 +141,14 @@ Taking the users and posts examples, using a many to many relationship, the `pos
 // Users table
 users
 
+// Users table primary key
+id
+
 // Posts table
 posts
+
+// Posts table primary key
+id
 
 // Map/Pivot table
 post_user_maps
@@ -153,13 +156,13 @@ post_user_maps
 // Map/Pivot table columns
 id | post_id | user_id
 
-// Map/Pivot table post ID foreign key constraint naming convention
+// Map/Pivot tables post_id foreign key constraint naming convention
 post_user_maps_post_id_fk
 
-// Map/Pivot table user ID foreign key constraint naming convention
+// Map/Pivot tables user_id foreign key constraint naming convention
 post_user_maps_user_id_fk
 ```
-As mentioned primary keys are the only exception which should:
+As mentioned, primary keys are the only exception which should:
 
 - Use lowercase
 - Use snake_case
