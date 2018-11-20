@@ -1,3 +1,15 @@
+# November 20, 2018
+
+### Update
+- Update HTML and Templates guidelines
+    - Add form element naming conventions
+    - Update naming conventions
+    - Update wording
+
+
+-----
+
+
 # November 19, 2018
 
 ### New
