@@ -28,7 +28,7 @@ Some projects written before this guideline may not follow it entirely or at all
 If you have trouble summarizing what a commit does, this may be because there are several changes that can't be explained in one commit summary. It is always better to split them into separate commits as small commits make the development process easier to understand and easier for developers to roll back changes if something goes wrong.
 
 ### Commit Often
-Regular commits help reduce the issue of being able to summarize what your commit does, as mentioned above. Not only does this help relieve this problem it also helps get your code into the hands of other developers and contributors to the project, causing less merge conflicts and a much more concise, rapid workflow for everyone.
+As mentioned above, regular commits help reduce the issue of being able to summarize what your commit does. Not only does this help relieve this problem it also helps get your code into the hands of other developers and contributors to the project, causing less merge conflicts and a much more concise, rapid workflow for everyone.
 
 ### Use Branches
 Always use branches when introducing backwards compatibility issues to older versions or if a large number of features are being implemented or removed from the project. This helps maintain an easier workflow and allows the "commit often" ideology to continue working.
@@ -36,15 +36,36 @@ Always use branches when introducing backwards compatibility issues to older ver
 
 ## Git Commit Fields
 ### Summary
-A summary line is required for each commit made to a git repository and should follow these simple rules:
- - Be no more than 50 characters long.
- - Start the line with Add, Update, Remove or Fix.
- - Don't end the line with a period.
+A summary line is required for each commit made to a git repository, they should:
+
+ - Use no more than 50 characters
+ - Start the line with either
+	 - Add
+	 - Update
+	 - Remove
+	 - Fix
+ - Never end the line with a period
 
 ### Description
-Descriptions may not always be necessary if the summary itself covers the changes made with the commit, but when they are needed they should follow a similar set of guidelines set in the [changelog](../version-control#guidelines) section.
+Descriptions may not always be necessary if the summary itself covers the changes made with the commit summary, they should:
 
-The first line should be the same as the summary and treated as the subject, with a set of bullet points treated as the body that detail each change. The subject and body should be separated with a blank line.
+- Start the line with the summary as the subject
+- Use bullet points treated as the body to detail each each
+- Have an empty line between the subject and body
+
+### Ordering
+Always stick to the order:
+
+- Add
+- Update
+- Remove
+- Fix
+
+There are 3 different levels of fixes, these should be listed using the Fix imperative in this order:
+
+- Security fixes
+- Bug fixes
+- General fixes like typos, wording or declaration orders
 
 
 ## Example
