@@ -1,4 +1,3 @@
-
 # Style Guidelines: CSS
 > *A set of guidelines to CSS.*
 <br />
@@ -11,6 +10,7 @@
     - [Extended](#extended)
     - [Shorthand vs Longhand](#shorthand-vs-longhand)
     - [Multi-line Property Values](#multi-line-property-values)
+    - [Vendor Prefixes](#vendor-prefixes)
 4. [Naming Conventions](#naming-conventions)
     - [BEM](#bem)
     - [Hooks](#hooks)
@@ -238,6 +238,9 @@ There may also be times when you could declare shorthand values on multiple line
     border-radius: $border-top-left-radius $border-top-right-radius $border-bottom-right-radius $border-bottom-left-radius;
 }
 ```
+
+### Vendor Prefixes
+Browsers sometimes add prefixes to experimental or nonstandard CSS properties, try to avoid declaring these in your CSS as you should really be using [autoprefixer](https://github.com/postcss/autoprefixer) within your build tools such as [Gulp](http://gulpjs.com/), [Grunt](https://gruntjs.com/) or [Webpack](https://webpack.js.org/). Autoprefixer will automatically add vendor prefixes to experimental and nonstandard CSS properties.
 
 
 ## Naming Conventions
