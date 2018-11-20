@@ -7,6 +7,8 @@
 - Update CSS guidelines
     - Add vendor prefixes section to syntax and formatting
     - Add file names section to naming conventions
+- Update Git guidelines
+    - Update summary section in git commit fields
 - Update HTML and Templates guidelines
     - Add form element naming conventions
     - Update naming conventions
