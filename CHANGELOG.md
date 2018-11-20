@@ -1,5 +1,8 @@
 # November 20, 2018
 
+### New
+- Add Database guidelines
+
 ### Updated
 - Update Changelog guidelines
     - Update guidelines section
