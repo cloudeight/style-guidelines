@@ -1,4 +1,3 @@
-
 # Style Guidelines: HTML and Templates
 > *A set of guidelines to HTML and templates.*
 <br />
@@ -26,11 +25,10 @@
     - [Functions](#functions)
     - [Expressions](#expressions)
     - [Naming Conventions](#naming-conventions)
-	    - [Variables](#variables-1)
-	    - [Filters](#filters-1)
-	    - [Functions](#functions-1)
-	    - [File Names](#file-names)
-	    - [Exceptions](#exceptions)
+        - [File Names](#file-names)
+        - [Form Elements](#form-elements)
+        - [Variables, Filters and Functions](#variables-filters-and-functions)
+        - [Exceptions](#exceptions)
 4. [Comments](#comments)
     - [Single Line](#single-line)
     - [Multi-line](#multi-line)
@@ -169,7 +167,7 @@ Boolean attribute flags are attributes such as `disabled`, `checked` and `select
 
 - Be declared as the last set of attributes of an element
 - Be declared in alphabetical order
-- Have no value attached to them
+- Have no value assigned to them
 
 ```html
 <input type="text" disabled />
@@ -227,7 +225,7 @@ Filters allow us to manipulate and format the output of a variable, they should:
 - Have no space before the argument parentheses
 - Have no padded spaces in the argument parentheses
 - Have any comma separated argument values separated with a single space
-- Use single quotes for filter argument values
+- Use single quotes for argument string values
 
 ```twig
 {{ var|striptags }}
@@ -271,16 +269,8 @@ Expression tags allow us to set variables, loop through arrays and test conditio
 - Use lowercase
 - Have each expression on a new line
 - Have a single space after the opening expression tag
+- Use single quotes for string values
 - Have a single space before the closing expression tag
-
-When setting and declaring variables:
-
-- Use single quotes for variable values
-    - Unless the variable value is taking the value of another variable
-
-```twig
-{% set var = 'foo' %}
-```
 
 If an expression requires multiple lines then they should:
 
@@ -288,7 +278,6 @@ If an expression requires multiple lines then they should:
 - Have the expression indented four (4) spaces
 - Split expression keywords to new lines where necessary (includes with passed data for example)
 - Have the closing expression tag on its own line
-
 
 If you are setting variable properties as arrays or objects or passing arrays to an include, they should:
 
@@ -302,6 +291,8 @@ If you are setting variable properties as arrays or objects or passing arrays to
 - Have the closing array/object literal on a new line
 
 ```twig
+{% set var = 'foo' %}
+
 {%
     set var = {
         'foo': 'bar',
@@ -330,11 +321,11 @@ When using control structures like if statements and for loops, they should:
 {% if auth and user.role == 'subscriber' %}
     <h1>Welcome!</h1>
 
-	<p>Content is visible...</p>
+    <p>Content is visible...</p>
 {% else %}
     <h1>Subscribe today!</h1>
 
-	<p>Content is hidden...</p>
+    <p>Content is hidden...</p>
 {% endif %}
 
 {% if var == 'foo' %}
@@ -351,42 +342,56 @@ When using control structures like if statements and for loops, they should:
 ```
 
 ### Naming Conventions
-Naming conventions are also extremely important and we should always ensure that variables, filters and function names are, consistent, meaningful and coherent.
-
-#### Variables
-When naming variables use snake_case:
-
-```twig
-{% set custom_variable = 'foo' %}
-```
-
-#### Filters
-When naming custom filters use snake_case:
-
-```twig
-{{ var|custom_filter('type', 'data') }}
-```
-
-#### Functions
-When naming custom functions use snake_case:
-
-```twig
-{{ custom_function('type', 'data') }}
-```
+Naming conventions are also extremely important and we should always ensure that everything is consistent, meaningful and coherent.
 
 #### File Names:
 Files names should:
 
 - Use lowercase
 - Use hyphen delimiters
-- Use .html extension
-	- Unless it is a template file then use the correct extension (.twig, .blade.php etc)
+- Use the .html extension
+    - Unless it is a template file then use the correct template extension
 - Have an underscore at the start of the file name for partials
 
 ```
 index.html
 template.twig
 _partial.twig
+```
+
+#### Form Elements
+When a form is submitted to the server a name attribute should be assigned to the element to represent the associated data. Name attributes should:
+
+- Use lowercase
+- Use snake_case
+
+```html
+<input type="text" name="customer_name" />
+
+<select name="customer_rating">
+    <option value="0">0<option>
+    <option value="1">1<option>
+    <option value="2">2<option>
+    <option value="3">3<option>
+    <option value="4">4<option>
+    <option value="5">5<option>
+</select>
+
+<textarea name="customer_comments"></textarea>
+```
+
+#### Variables, Filters and Functions
+When naming variables, filters and functions you should:
+
+- Use lowercase
+- Use snake_case
+
+```twig
+{% set custom_variable = 'foo' %}
+
+{{ var|custom_filter('type', 'data') }}
+
+{{ custom_function('type', 'data') }}
 ```
 
 #### Exceptions
@@ -463,7 +468,7 @@ There is a case where inline comments are used, when showcasing a closing tag an
 ```twig
 <div class="container">
     <div class="grid">
-	    {% for user in users %}
+        {% for user in users %}
             <div class="grid__item">{{ user.name }}</div>
         {% endfor %} {# user loop #}
     </div> <!-- Grid -->
