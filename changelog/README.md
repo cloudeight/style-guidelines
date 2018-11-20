@@ -31,16 +31,18 @@ Looking at git commits and summaries for a project can sometimes be troublesome 
 
 ## Guidelines
 Although every project differs, a general guideline is to keep everything as humanly readable as possible and group changes together to easily differentiate between new and removed features for example, keeping the latest updates towards the top of the changelog. Types of changes should be categorized and grouped as follows:
-1. New Features (Add)
-2. Updated Features (Update)
-3. Removed Features (Remove)
-4. Security Fixes (Fix)
-5. Bug Fixes (Fix)
-6. Release Notes
 
-Under each group, use bullet points for each item written with the imperative: "Add", "Update", "Remove" and "Fix". If an issue was resolved or closed because of an update, always link to the issue in parenthesis at the end of the bullet point for easy referencing.
+1. New
+2. Updated
+3. Removed
+4. Security Fixes
+5. Bug Fixes
+6. Fixed
+7. Release Notes
 
-Release notes can be added at the end detailing specific notes, developer messages or note-worthy additions to the update.
+Under each group, use bullet points for each item written with the imperative: "Add", "Update", "Remove" and "Fix", in a similar fashion to our [Git](https://github.com/cloudeight/style-guidelines/tree/master/git) guidelines. If an issue was resolved or closed because of an update, always link to the issue in parenthesis at the end of the bullet point for easy referencing.
+
+Release notes can be added at the end detailing specific note-worthy additions or developer messages.
 
 Note: Changelogs don't use the imperative as they are meant to be user-friendly and more human readable, rather than a list of commands like git commits.
 
@@ -50,28 +52,46 @@ To help maintain a visual roadmap of where the project is heading and which feat
 
 
 ## Example
-```
-Roadmap
---------------------------------------------------------------------------------
+```markdown
+# Roadmap
+
+### New
 - Add remember me option at user login
+
+### Update
 - Update user profiles with cover photos
 
-v1.1.1
--------------------------------------------------------------------------------
-Bug Fixes
-    - Fix overlay bug in legacy browsers
 
-Release Notes
-    - Overlays should now work back to IE9
+-----
 
-v1.1.0
--------------------------------------------------------------------------------
-New Features
-    - Add mini bio for user profiles
-    - Add online now icon to user profiles
 
-Security Fixes
-    - Fix sensitive data being stored in cookies (#1)
+# v1.1.1
+
+### Bug Fixes
+- Fix overlay bug in legacy browsers
+
+### Release Notes
+- Overlays should now work back to IE9
+
+
+-----
+
+
+# v1.1.0
+
+### New
+- Add mini bio for user profiles
+- Add online now icon to user profiles
+
+### Security Fixes
+- Fix sensitive data being stored in cookies (#1)
+
+
+-----
+
+# v1.0.0
+
+### Initial Release
 ```
 
 
