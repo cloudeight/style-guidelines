@@ -41,11 +41,11 @@ SemVer works by incrementing the correct component depending on the update. This
 
 ### Rules
  1. Version numbers should never contain negative numbers or contain leading zeroes.
- 2. Each version component must increase numerically by a value of 1.
- 3. When a version component of higher precedence is increased the other components return to 0.
-     - Major version update: Minor and Patch return to 0.
-     - Minor version update: Patch returns to 0.
- 4. Pre release builds must suffixed with the corresponding `-alpha` or `-beta` identifier.
+ 2. Each version component must increase numerically by a value of one (1).
+ 3. When a version component of higher precedence is increased the other components return to zero (0).
+     - Major version update: Minor and Patch return to zero (0).
+     - Minor version update: Patch returns to zero (0).
+ 4. Pre release builds must be suffixed with the corresponding `-alpha` or `-beta` identifier.
  5. Version `1.0.0` is considered the stable release with a public API and documentation.
 
 ### Version Components
@@ -59,8 +59,8 @@ If an update contains a new feature that is backwards compatible with the curren
 If an update contains changes that are likely to break the current API as there are backwards compatibility issues, this would be considered a major release. This will inform users that they will need to update their own projects' code to accommodate for the new version. This means the `x` major version component would increase in the version number.
 
 #### Exceptions
- 1. Alpha builds do not increase any of the 3 version components but have their own incremental build number.
- 2. Beta builds do not increase the major version component, only the minor and patch version components.
+ 1. [Alpha builds](#alpha-build) do not increase any of the 3 version components but have their own incremental build number.
+ 2. [Beta builds](#beta-build) do not increase the major version component, only the minor and patch version components.
 
 
 ## Development
@@ -74,12 +74,14 @@ All alpha builds should always contain the hyphen alpha suffix and start like so
 
 Since there will be many code breaking changes and backwards compatibility issues with almost every update, the 3 version components are not changed, instead, the alpha suffix contains an alpha build number which is increased with each release, like so:
 
-`0.1.0-alpha.9` -> `0.1.0-alpha.10` -> `0.1.0-alpha.11`
-
-These build numbers should follow the same rules as the version components outlined [above](#rules).
+```
+0.1.0-alpha.9
+0.1.0-alpha.10
+0.1.0-alpha.11
+```
 
 ### Beta Build
-The beta phase begins when the project is feature complete but likely to contain a number of known bugs that need to be fixed.
+The beta phase begins when the project has many completed features, is usable in non-production environments, but likely to contain a number of known bugs that need to be fixed.
 
 Beta builds ***can*** be publicly available on dependency package managers such as [npm](https://www.npmjs.com/), [yarn](https://yarnpkg.com/) or [composer](https://getcomposer.org/) etc if required, but will usually just be available via a GitHub repository, usually public, but sometimes private.
 
@@ -87,7 +89,13 @@ All beta builds should always contain the hyphen beta suffix and start like so: 
 
 During this stage of the development process, the project is still updated heavily and rapidly but unlike alpha builds the minor and patch version components are now increased and the alpha build number is dropped, like so:
 
-`0.1.9-beta` -> `0.1.10-beta` -> `0.1.11-beta` -> `0.2.0-beta` -> `0.2.1-beta`
+```
+0.1.9-beta
+0.1.10-beta
+0.1.11-beta
+0.2.0-beta
+0.2.1-beta
+```
 
 However, even with code breaking changes or backwards compatibility issues in an update, the major version component must **never** be increased in a beta build as this signals the start of a stable release. This is because although minor versions may contain code breaking changes and cause backwards compatibility issues, this is expected in a beta build.
 
