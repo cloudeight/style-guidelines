@@ -104,7 +104,7 @@ In most of our projects we tend to use the same viewport settings, however, some
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 ```
 
-This tells the browser that the website should adapt to the device width while setting the initial zoom/scale. It also tells the browser that the viewer cannot zoom in or out of the page. The reason for this is we should be using responsive web design with media queries to adapt our sites to the device being used. Obviously this can be adjusted on a per project basis but is a good starting point.
+This tells the browser that the website should adapt to the device width while setting the initial zoom/scale. It also tells the browser that the viewer cannot zoom in or out of the page. The reason for this is we should be using responsive web design with media queries to adapt our sites to the device being used. Obviously this can be adjusted on a per project basis but it is a good starting point.
 
 ### Closing Elements
 There are 2 types of element tags, container elements and non container elements. Container elements are element tags such as `<div></div>` and `<p></p>`, these are elements that can have nested elements within them. Non container elements are singular elements with no nested elements such as `<meta />` and `<input />`.
