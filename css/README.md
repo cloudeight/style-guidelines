@@ -12,6 +12,7 @@
     - [Multi-line Property Values](#multi-line-property-values)
     - [Vendor Prefixes](#vendor-prefixes)
 4. [Naming Conventions](#naming-conventions)
+    - [File Names](#file-names)
     - [BEM](#bem)
     - [Hooks](#hooks)
         - [State Hooks](#state-hooks)
@@ -244,7 +245,24 @@ Browsers sometimes add prefixes to experimental or nonstandard CSS properties, t
 
 
 ## Naming Conventions
-Naming conventions are also extremely important and we should always ensure that class names, SASS variables, mixins and function names are meaningful and coherent too.
+Naming conventions are also extremely important and we should always ensure that everything is consistent, meaningful and coherent.
+
+#### File Names:
+Files names should:
+
+- Use lowercase
+- Use hyphen delimiters
+- Use the .css extension
+    - Unless it is a CSS pre-processor file then use the correct template extension
+- Include .min extension for minified stylesheets
+- Have an underscore at the start of the file name for partials
+
+```
+reset.css
+app.min.css
+flex-box.scss
+_partial.scss
+```
 
 ### BEM
 >"Block Element Modifier is a methodology that helps you to create reusable components and code sharing in front-end development"
