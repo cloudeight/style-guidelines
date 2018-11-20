@@ -267,7 +267,6 @@ Refer to our [function naming conventions](#functions-2) for more on naming your
 Expression tags allow us to set variables, loop through arrays and test conditionals. They should:
 
 - Use lowercase
-- Have each expression on a new line
 - Have a single space after the opening expression tag
 - Use single quotes for string values
 - Have a single space before the closing expression tag
