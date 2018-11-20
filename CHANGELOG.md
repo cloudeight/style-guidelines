@@ -1,6 +1,9 @@
 # November 20, 2018
 
-### Update
+### Updated
+- Update Changelog guidelines
+    - Update guidelines section
+    - Update example section
 - Update CSS guidelines
     - Add vendor prefixes section to syntax and formatting
     - Add file names section to naming conventions
