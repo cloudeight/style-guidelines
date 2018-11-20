@@ -1,6 +1,8 @@
 # November 20, 2018
 
 ### Update
+- Update CSS guidelines
+    - Add vendor prefixes section to syntax and formatting
 - Update HTML and Templates guidelines
     - Add form element naming conventions
     - Update naming conventions
