@@ -5,6 +5,8 @@
     - Update wording
     - Update examples
     - Update character encoding section location
+- Update HTML and templates guidelines
+    - Update the Expressions section under Templates
 
 
 -----
