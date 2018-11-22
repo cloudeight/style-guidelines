@@ -280,12 +280,12 @@ If an expression requires multiple lines then they should:
 
 If you are setting variable properties as arrays or objects or passing arrays to an include, they should:
 
-- Have the opening array/object literal on the same line as the first line of the expression
+- Have the opening array/object literal on the same line as the same line as the expression keyword
 - Use single quotes for key properties
+    - Except when passing variables through to an include
 - Have no space before a key property colon
 - Have a single space after a key property colon
-- Use single quotes for key values
-    - Unless the key value is taking the value of another variable
+- Use single quotes for string values
 - Have no trailing comma on the last key value pair
 - Have the closing array/object literal on a new line
 
