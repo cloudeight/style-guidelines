@@ -1,3 +1,15 @@
+# November 22, 2018
+
+### Updated
+- Update database guidelines
+    - Update wording
+    - Update examples
+    - Update character encoding section location
+
+
+-----
+
+
 # November 20, 2018
 
 ### New
