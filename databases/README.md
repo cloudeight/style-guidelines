@@ -5,8 +5,7 @@
 
 ## Table of Contents
 1. [Introduction](#introduction)
-2. [Character Encoding](#character-encoding)
-3. [Naming Conventions](#naming-conventions)
+2. [Naming Conventions](#naming-conventions)
     - [General](#general)
     - [Tables](#tables)
     - [Columns](#columns)
@@ -14,6 +13,7 @@
     - [Foreign Keys](#foreign-keys)
     - [Map/Pivot Tables](#mappivot-tables)
     - [Constraints](#constraints)
+3. [Character Encoding](#character-encoding)
 4. [Dates](#dates)
 5. [SQL](#sql)
 
@@ -24,15 +24,6 @@ This is a style guideline for version control that we use for projects at [cloud
 It is in no way perfect or the definitively correct way to structure your databases in your projects and we're always happy for insights, feedback, improvements and recommendations to help build on it!
 
 Some projects written before this guideline may not follow it entirely or at all and there may be times when projects follow their own guidelines due to special use cases. Of course, these guidelines may be updated as and when needed.
-
-
-## Character Encoding
-This isn't a guideline for the general public to follow unless you wish to, this is more of a reference for [cloudeight](https://github.com/cloudeight) in-house projects. Here at [cloudeight](https://github.com/cloudeight) we predominantly use the following:
-
-- Character Set: `utf8mb4`
-- Collation: `utf8mb4_unicode_ci`
-
-Obviously this can be adjusted on a per project basis but it is a good starting point.
 
 
 ## Naming Conventions
@@ -50,12 +41,11 @@ Tables are a collection of one (1) or more rows/entities, table names should:
 // Users table
 users
 
-// Posts table
-posts
-
-// Comments table
-comments
+// User sessions table
+user_sessions
 ```
+
+Please refer to the [map/pivot tables](#mappivot-tables) section for more on many to many relationship tables.
 
 
 ### Columns
@@ -75,6 +65,8 @@ date_of_birth
 ### Primary Keys
 Every table should have a unique identifier column, set as a primary key that auto increments, this row should simply be called `id`.
 
+Please refer to the [constraints](#constraints) section for more on naming primary key constraints.
+
 ### Foreign Keys
 When referencing a primary key in another table, a foreign key should:
 
@@ -90,6 +82,8 @@ id
 // Posts table referencing a user
 user_id
 ```
+
+Please refer to the [constraints](#constraints) section for more on naming foreign key constraints.
 
 ### Map/Pivot Tables
 If a tables primary purpose is to define many to many relationships, the table name should:
@@ -156,13 +150,13 @@ post_user_maps
 // Map/Pivot table columns
 id | post_id | user_id
 
-// Map/Pivot tables post_id foreign key constraint naming convention
+// Map/Pivot tables post_id foreign key constraint
 post_user_maps_post_id_fk
 
-// Map/Pivot tables user_id foreign key constraint naming convention
+// Map/Pivot tables user_id foreign key constraint
 post_user_maps_user_id_fk
 ```
-As mentioned, primary keys are the only exception which should:
+As mentioned, primary keys are the only exception to the constraint naming conventions, primary key constraint names should:
 
 - Use lowercase
 - Use snake_case
@@ -186,6 +180,15 @@ Here is a list of all the constraints and their corresponding character suffixes
 | Index       | _in              |
 
 
+## Character Encoding
+This section is not necessarily for the general public to follow unless you wish to, this is more of a reference for [cloudeight](https://github.com/cloudeight) in-house projects. Here at [cloudeight](https://github.com/cloudeight) we predominantly use the following character encoding:
+
+- Character Set: `utf8mb4`
+- Collation: `utf8mb4_unicode_ci`
+
+Obviously this can be adjusted on a per project basis but it is a good starting point.
+
+
 ## Dates
 Just like the [character encoding](#character-encoding), this is more of a reference for [cloudeight](https://github.com/cloudeight) in-house projects.
 
@@ -193,8 +196,8 @@ We include a `created_at`, `updated_at` and `deleted_at` column on every table, 
 
 It allows us to filter out "deleted" entries to a table in our queries, while also knowing when it was "deleted" and allowing for it to be restored if necessary, think of it as a recycle bin for table rows/entries.
 
-Obviously this can be adjusted on a per project basis but it is a good starting point and generally what we use for most projects.
+Obviously this can be adjusted on a per project basis but it is a good starting point.
 
 
 ## SQL
-Now that we have established naming conventions and structuring of our databases, it would be a good time to follow on from this by reading our SQL style guidelines. However, unfortunately this part of our style guidelines is still a work in progress and should hopefully be published soon!
+Now that we have established naming conventions and structuring of our databases, it would be a good time to follow on from this by reading our SQL style guidelines. However, unfortunately this part of our style guidelines is still a work in progress and should hopefully be published soon.
