@@ -1,9 +1,9 @@
 # November 22, 2018
 
 ### Updated
-- Update wording
-- Update examples
-- Update character encoding section location
+- Updated wording
+- Updated examples
+- Updated character encoding section location
 
 
 -----

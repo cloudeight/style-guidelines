@@ -1,12 +1,12 @@
 # November 22, 2018
 
 ### Updated
-- Update database guidelines
-    - Update wording
-    - Update examples
-    - Update character encoding section location
-- Update HTML and templates guidelines
-    - Update the Expressions section under Templates
+- Updated database guidelines
+    - Updated wording
+    - Updated examples
+    - Updated character encoding section location
+- Updated HTML and templates guidelines
+    - Updated the Expressions section under Templates
 
 
 -----
@@ -15,25 +15,25 @@
 # November 20, 2018
 
 ### New
-- Add Database guidelines
+- Added Database guidelines
 
 ### Updated
-- Update Changelog guidelines
-    - Update guidelines section
-    - Update example section
-- Update CSS guidelines
-    - Add vendor prefixes section to syntax and formatting
-    - Add file names section to naming conventions
-- Update Git guidelines
-    - Update summary section in git commit fields
-- Update HTML and Templates guidelines
-    - Add form element naming conventions
-    - Update naming conventions
-    - Update wording
-- Update Version Control guidelines
-    - Add anchor links to alpha and beta build guidelines in exceptions
-    - Update rules wording
-    - Update version number examples
+- Updated Changelog guidelines
+    - Updated guidelines section
+    - Updated example section
+- Updated CSS guidelines
+    - Added vendor prefixes section to syntax and formatting
+    - Added file names section to naming conventions
+- Updated Git guidelines
+    - Updated summary section in git commit fields
+- Updated HTML and Templates guidelines
+    - Added form element naming conventions
+    - Updated naming conventions
+    - Updated wording
+- Updated Version Control guidelines
+    - Added anchor links to alpha and beta build guidelines in exceptions
+    - Updated rules wording
+    - Updated version number examples
 
 
 -----
@@ -42,7 +42,7 @@
 # November 19, 2018
 
 ### New
-- Add HTML and Templates guidelines
+- Added HTML and Templates guidelines
 
 
 -----
@@ -51,13 +51,13 @@
 # November 18, 2018
 
 ### Updated
-- Update CSS guidelines
-    - Update Syntax and Formatting Extended examples
-    - Update SASS Mixin and Function examples
-    - Update DocBlock rules and examples
-    - Update various headings
-    - Remove CSS anatomy
-    - Fix typos
+- Updated CSS guidelines
+    - Updated Syntax and Formatting Extended examples
+    - Updated SASS Mixin and Function examples
+    - Updated DocBlock rules and examples
+    - Updated various headings
+    - Removed CSS anatomy
+    - Fixed typos
 
 
 -----
@@ -66,9 +66,9 @@
 # July 30, 2018
 
 ### Updated
-- Update Version Control guidelines
-    - Remove beta build section
-    - Fix typo
+- Updated Version Control guidelines
+    - Removed beta build section
+    - Fixed typo
 
 
 -----
@@ -77,14 +77,14 @@
 # July 27, 2018 #2
 
 ### Updated
-- Update Changelog guidelines
-    - Add example section
-    - Update guidelines section
-    - Fix typo
+- Updated Changelog guidelines
+    - Added example section
+    - Updated guidelines section
+    - Fixed typo
 
-- Update Git guidelines
-    - Add example section
-    - Update description
+- Updated Git guidelines
+    - Added example section
+    - Updated description
 
 
 -----

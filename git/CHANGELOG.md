@@ -1,7 +1,7 @@
 # Novemeber 20, 2018
 
 ### Updated
-- Update summary section in git commit fields
+- Updated summary section in git commit fields
 
 -----
 
@@ -9,10 +9,10 @@
 # July 27, 2018 #2
 
 ### New
-- Add example section
+- Added example section
 
 ### Updated
-- Update description
+- Updated description
 
 
 -----

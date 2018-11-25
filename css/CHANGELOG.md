@@ -1,8 +1,8 @@
 # November 20, 2018
 
 ### New
-- Add vendor prefixes section to syntax and formatting
-- Add file names section to naming conventions
+- Added vendor prefixes section to syntax and formatting
+- Added file names section to naming conventions
 
 
 -----
@@ -10,11 +10,11 @@
 # November 19, 2018
 
 ### Updated
-- Update wording
-- Update examples
+- Updated wording
+- Updated examples
 
 ### Fixed
-- Fix typos
+- Fixed typos
 
 
 -----
@@ -23,16 +23,16 @@
 # November 18, 2018
 
 ### Updated
-- Update Syntax and Formatting Extended examples
-- Update SASS Mixin and Function examples
-- Update DocBlock rules and examples
-- Update various headings
+- Updated Syntax and Formatting Extended examples
+- Updated SASS Mixin and Function examples
+- Updated DocBlock rules and examples
+- Updated various headings
 
 ### Removed
-- Remove CSS anatomy
+- Removed CSS anatomy
 
 ### Fixed
-- Fix typos
+- Fixed typos
 
 
 -----
