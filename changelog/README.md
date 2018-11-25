@@ -40,11 +40,9 @@ Although every project differs, a general guideline is to keep everything as hum
 6. Fixed
 7. Release Notes
 
-Under each group, use bullet points for each item written with the imperative: "Add", "Update", "Remove" and "Fix", in a similar fashion to our [Git](https://github.com/cloudeight/style-guidelines/tree/master/git) guidelines. If an issue was resolved or closed because of an update, always link to the issue in parenthesis at the end of the bullet point for easy referencing.
+Under each group, use bullet points for each item using: "Added", "Updated", "Removed" and "Fixed", in a similar fashion to our [Git](https://github.com/cloudeight/style-guidelines/tree/master/git) guidelines but with the non-imperative. If an issue was resolved or closed because of a commit, always link to the issue in parenthesis at the end of the bullet point for easy referencing.
 
 Release notes can be added at the end detailing specific note-worthy additions or developer messages.
-
-Note: Changelogs don't use the imperative as they are meant to be user-friendly and more human readable, rather than a list of commands like git commits.
 
 
 ## Roadmap
@@ -56,10 +54,10 @@ To help maintain a visual roadmap of where the project is heading and which feat
 # Roadmap
 
 ### New
-- Add remember me option at user login
+- Added remember me option at user login
 
 ### Update
-- Update user profiles with cover photos
+- Updated user profiles with cover photos
 
 
 -----
@@ -68,7 +66,7 @@ To help maintain a visual roadmap of where the project is heading and which feat
 # v1.1.1
 
 ### Bug Fixes
-- Fix overlay bug in legacy browsers
+- Fixed overlay bug in legacy browsers
 
 ### Release Notes
 - Overlays should now work back to IE9
@@ -80,11 +78,11 @@ To help maintain a visual roadmap of where the project is heading and which feat
 # v1.1.0
 
 ### New
-- Add mini bio for user profiles
-- Add online now icon to user profiles
+- Added mini bio for user profiles
+- Added online now icon to user profiles
 
 ### Security Fixes
-- Fix sensitive data being stored in cookies (#1)
+- Fixed sensitive data being stored in cookies (#1)
 
 
 -----
