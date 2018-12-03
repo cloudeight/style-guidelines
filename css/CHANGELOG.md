@@ -1,3 +1,12 @@
+# December 3, 2018
+
+### Updated
+- Updated character column width limit from 100 to 80
+
+
+-----
+
+
 # November 20, 2018
 
 ### New
@@ -6,6 +15,7 @@
 
 
 -----
+
 
 # November 19, 2018
 
