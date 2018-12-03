@@ -2,6 +2,7 @@
 
 ### Updated
 - Updated character column width limit from 100 to 80
+- Updated examples
 
 
 -----
