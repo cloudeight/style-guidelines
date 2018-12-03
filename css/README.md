@@ -65,7 +65,7 @@ This means any number of developers can work within a stylesheet without the wor
 In it's basic form a CSS ruleset should:
 
 - Use four (4) space indents (no tabs)
-- Use the 100 character wide column limit
+- Use the 80 character wide column limit
 - Use lowercase
 - Have each selector on a new line
 - Have the opening brace on the same line as the last selector
@@ -591,7 +591,7 @@ All of our stylesheets should include a heading or as mentioned above, individua
 - Have two (2) empty lines above
     - Unless it is the first heading of the stylesheet
 - Open with one (1) forward slash, one (1) asterisk, two (2) spaces and ninety two (92) equals signs
-    - Leaving 4 spaces at the end for the 100 character wide column limit
+    - Leaving 4 spaces at the end for the 80 character wide column limit
 - Have the heading text on a new line
 - Have four (4) spaces before the heading text
 - Have capitalised heading text
@@ -600,7 +600,7 @@ All of our stylesheets should include a heading or as mentioned above, individua
 - Have a space either side of breadcrumb delimiters
 - Close on a new line
 - Close with four (4) spaces, ninety two (92) equals signs, two (2) spaces, one (1) asterisk and one (1) forward slash
-    - Using the 100 character wide column limit
+    - Using the 80 character wide column limit
 - Have one (1) empty line below
 
 **Example:**
@@ -654,7 +654,7 @@ Inline comments are short and concise and should:
 }
 ```
 
-For more on inline comments and what to do when multiple inline comments are repeated within a CSS ruleset or if the inline comment exceeds the 100 character wide column limit, read [number labels](#number-labels).
+For more on inline comments and what to do when multiple inline comments are repeated within a CSS ruleset or if the inline comment exceeds the 80 character wide column limit, read [number labels](#number-labels).
 
 ### DocBlocks
 #### Basics
@@ -663,7 +663,7 @@ A DocBlock comment is used when a detailed description or explanation is needed,
 - Open with one (1) forward slash and two (2) asterisk
 - Have the first line of text on a new line
 - Have each new line start with one (1) space, one (1) asterisk and two (2) spaces before the line of text
-- Have each line of text wrap before the 100 character wide column limit
+- Have each line of text wrap before the 80 character wide column limit
 - Have a capitalised first letter for descriptions
 - Have a full stop at the end of descriptions
 - Close on a new line
@@ -802,7 +802,7 @@ When combining either of the SASS annotations, `{type}`, `$paramater` and the an
 ```
 
 #### Number Labels
-Number labels are used when [inline comments](#inline) would need to be repeated or if an inline comment exceeds the 100 character wide column limit. They should follow the same structure as inline comments and should also:
+Number labels are used when [inline comments](#inline) would need to be repeated or if an inline comment exceeds the 80 character wide column limit. They should follow the same structure as inline comments and should also:
 
 - Have the label wrapped in square brackets
 - Have no padded spaces in square brackets
