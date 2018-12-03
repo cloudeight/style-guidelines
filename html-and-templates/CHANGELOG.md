@@ -1,7 +1,17 @@
+# December 3, 2018
+
+### Updated
+- Updated character column width limit from 100 to 80
+
+
+-----
+
+
 # November 22, 2018
 
 ### Updated
 - Updated the Expressions section under Templates
+
 
 -----
 
