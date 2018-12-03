@@ -3,6 +3,7 @@
 ### Updated
 - Updated css guidelines
     - Updated character column width limit from 100 to 80
+    - Updated examples
 
 - Updated html and templates guidelines
     - Updated character column width limit from 100 to 80
