@@ -48,7 +48,7 @@ Some projects written before this guideline may not follow it entirely or at all
 For consistency between HTML documents, you should:
 
 - Use four (4) space indents (no tabs)
-- Use the 100 character wide column limit
+- Use the 80 character wide column limit
 - Use lowercase
 - Have an empty line above each new line element tag
     - Unless it is the first new line element tag of a section
