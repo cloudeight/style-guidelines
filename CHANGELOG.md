@@ -1,3 +1,16 @@
+# December 3, 2018
+
+### Updated
+- Updated css guidelines
+    - Updated character column width limit from 100 to 80
+
+- Updated html and templates guidelines
+    - Updated character column width limit from 100 to 80
+
+
+-----
+
+
 # November 22, 2018
 
 ### Updated
