@@ -78,21 +78,11 @@ In it's basic form a CSS ruleset should:
 - Have a trailing semi-colon at the end of each declaration
 - Have the closing brace on a new line
 
-**Good:**
 ```css
 .selector-1,
 .selector-2 {
     background-color: white;
     color: black;
-}
-```
-
-**Bad:**
-```css
-.selector-1, .selector-2
-{
-    color:black;
-    background-color : white;
 }
 ```
 
@@ -106,29 +96,17 @@ There are of course more than the basic selector, property/value declarations. T
 - Have any comma separated values separated with a single space
 - Have no padded spaces in parentheses
 
-**Good:**
 ```css
 .selector-1:first-child {
     background-image: url('/path/to/image.jpeg');
     color: hsla(0, 100%, 50%, 1);
     opacity: 0.5;
 }
-
-.selector-1::before {
-    content: 'I am a pseudo element!';
-}
 ```
 
-**Bad:**
 ```css
-.selector-1:first-child {
-    background-image: url( "/path/to/image.jpeg" );
-    color: hsla( 0,100%,50%,1 );
-    opacity: .5;
-}
-
-.selector-1:before {
-    content: "I am a pseudo element!";
+.selector-1::before {
+    content: 'I am a pseudo element!';
 }
 ```
 
@@ -201,7 +179,6 @@ Some properties allow for multiple value declarations, such as box shadows. Sinc
 - Have each value on a new line
 - Have each value indented to the same level as the first value
 
-**Good:**
 ```css
 .selector {
     box-shadow: 5px 5px 10px 0 hsla(0, 100%, 0%, 0.2),
@@ -209,34 +186,14 @@ Some properties allow for multiple value declarations, such as box shadows. Sinc
 }
 ```
 
-**Bad:**
-```css
-.selector {
-    box-shadow: 5px 5px 10px 0 hsla(0, 100%, 0%, 0.2), -5px -5px 10px 0 hsla(0, 100%, 50%, 0.1);
-}
-
-.selector {
-    box-shadow: 5px 5px 10px 0 hsla(0, 100%, 0%, 0.2),
-    -5px -5px 10px 0 hsla(0, 100%, 50%, 0.1);
-}
-```
-
 There may also be times when you could declare shorthand values on multiple lines too. For example, if we are using SASS, we could have 4 variables that declare the radius of each corner of an element.
 
-**Good:**
 ```css
 .selector {
     border-radius: $border-top-left-radius
                    $border-top-right-radius
                    $border-bottom-right-radius
                    $border-bottom-left-radius;
-}
-```
-
-**Bad:**
-```css
-.selector {
-    border-radius: $border-top-left-radius $border-top-right-radius $border-bottom-right-radius $border-bottom-left-radius;
 }
 ```
 
@@ -279,34 +236,18 @@ All class naming conventions should:
 - Use BEM methodology and structuring
 - Use hyphen delimiters
 
-**Good:**
 ```css
 .component-block {}
 .component-block__element {}
 .component-block--modifier {}
 ```
 
-**Bad:**
-```css
-.Component {}
-.Component_Element {}
-.Component_Modifier {}
-```
-
 Following on with the BEM methodology and structuring, block element descendants should not chain their parent elements in their own name. Each block element is its' own element and each name should only contain one (1) set of double underscores `__` and one (1) set of double hyphens `--`.
 
-**Good:**
 ```css
 .block {}
 .block__head {}
 .block__heading {}
-```
-
-**Bad:**
-```css
-.block {}
-.block__head {}
-.block__head__heading {}
 ```
 
 ### Hooks
@@ -380,7 +321,6 @@ SASS variables do not need to follow that of the [BEM](#bem) methodology and str
 - Have a single space before a flag
 - Have a trailing semi-colon at the end of the value
 
-**Good:**
 ```scss
 $component-background-color: hsla(0, 100%, 100%, 1);
 $component-width: 500px !default;
@@ -388,17 +328,6 @@ $component-width: 500px !default;
 .selector {
     background-color: $component-background-color;
     width: $component-width;
-}
-```
-
-**Bad:**
-```scss
-.selector {
-    $ComponentWidth : 500px!default;
-    $ComponentBackgroundColor:hsla(0, 100%, 100%, 1);
-
-    background-color: $ComponentBackgroundColor;
-    width: $ComponentWidth;
 }
 ```
 
@@ -415,21 +344,11 @@ Maps are very similar to SASS [variables](#variables) in their naming convention
 - Have the closing parentheses on a new line
 - Have a trailing semi-colon after the closing parentheses
 
-**Good:**
 ```scss
 $colors: (
     'primary': hsla(0, 100%, 100%, 1),
     'secondary': hsla(0, 100%, 0%, 1)
 ) !default;
-```
-
-**Bad:**
-```scss
-$colors:
-(
-    primary:hsla(0, 100%, 100%, 1),
-    secondary : hsla(0, 100%, 0%, 1),
-)!default;
 ```
 
 ### Mixins and Functions
@@ -447,26 +366,14 @@ Like SASS [variables](#variables) and [maps](#maps), mixins and functions do not
 - Have a single space before the opening brace
 - Have the closing brace on a new line
 
-**Good**
 ```scss
 @mixin border-radius($top-left: 0, $top-right: 0, $bottom-right: 0, $bottom-left: 0) {
     // Mixin code...
 }
-
-@function set-font-color($background-color) {
-    // Function code...
-}
 ```
 
-**Bad:**
 ```scss
-@mixin BorderRadius( $top-left:0, $top-right:0, $bottom-right:0, $bottom-left:0 )
-{
-    // Mixin code...
-}
-
-@function setFontColor( $background-color )
-{
+@function set-font-color($background-color) {
     // Function code...
 }
 ```
@@ -487,7 +394,6 @@ As mentioned above, we should always try our best to seamlessly place SASS withi
 - Nested selectors
 - Mixin calls `@include` (with `@content`)
 
-**Good:**
 ```scss
 .selector {
     @extend .element;
@@ -512,34 +418,6 @@ As mentioned above, we should always try our best to seamlessly place SASS withi
     .selector__element {}
 
     @include breakpoint('mobile') {}
-}
-```
-
-**Bad:**
-```scss
-.selector {
-    @include border-radius(5px);
-    color: hsla(0, 100%, 100%, 1);
-    background-color: hsla(0, 100%, 0%, 1);
-    @extend .element;
-
-    @include breakpoint('mobile') {}
-
-    .selector__element {}
-
-    &.has-error {}
-
-    &::before {}
-
-    &:first-child {}
-
-    &.is-small {}
-
-    &.selector--modifier {}
-
-    &.is-primary {}
-
-    &.is-active {}
 }
 ```
 
@@ -554,23 +432,10 @@ SASS has the ability to calculate if/else conditional statements, they should:
 - Have the closing brace on a new line
 - Have the else key word on the same line as the closing and opening brace
 
-**Good:**
 ```scss
 @if (!$variable) {
     // Do something...
 } @else {
-    // Do something else...
-}
-```
-
-**Bad:**
-```scss
-@if( ! $variable )
-{
-    // Do something...
-}
-@else
-{
     // Do something else...
 }
 ```
@@ -590,7 +455,7 @@ All of our stylesheets should include a heading or as mentioned above, individua
 
 - Have two (2) empty lines above
     - Unless it is the first heading of the stylesheet
-- Open with one (1) forward slash, one (1) asterisk, two (2) spaces and ninety two (92) equals signs
+- Open with one (1) forward slash, one (1) asterisk, two (2) spaces and ninety two (72) equals signs
     - Leaving 4 spaces at the end for the 80 character wide column limit
 - Have the heading text on a new line
 - Have four (4) spaces before the heading text
@@ -599,15 +464,14 @@ All of our stylesheets should include a heading or as mentioned above, individua
 - Use a hyphen and greater than sign for breadcrumb delimiters
 - Have a space either side of breadcrumb delimiters
 - Close on a new line
-- Close with four (4) spaces, ninety two (92) equals signs, two (2) spaces, one (1) asterisk and one (1) forward slash
+- Close with four (4) spaces, ninety two (72) equals signs, two (2) spaces, one (1) asterisk and one (1) forward slash
     - Using the 80 character wide column limit
 - Have one (1) empty line below
 
-**Example:**
 ```scss
-/*  ============================================================================================
+/*  ========================================================================
     APPLICATION -> COMPONENTS -> NOTICE -> VARIABLES
-    ============================================================================================  */
+    ========================================================================  */
 
 $notice-background-color: hsla(0, 100%, 100%, 1);
 $notice-border-width: 1px;
@@ -615,9 +479,9 @@ $notice-border-color: hsla(0, 100%, 100%, 1);
 $notice-border-style: solid;
 
 
-/*  ============================================================================================
+/*  ========================================================================
     APPLICATION -> COMPONENTS -> NOTICE
-    ============================================================================================  */
+    ========================================================================  */
 
 .notice {
     background-color: $notice-background-color:
@@ -640,17 +504,9 @@ Inline comments are short and concise and should:
 - Always be on one line
 - Coherently explain what we are doing
 
-**Good:**
 ```css
 .selector {
     width: 100%; // Make the element responsive
-}
-```
-
-**Bad:**
-```css
-.selector {
-    width: 100%;//responsive
 }
 ```
 
@@ -669,20 +525,11 @@ A DocBlock comment is used when a detailed description or explanation is needed,
 - Close on a new line
 - Close with one (1) space, one (1) single asterisk and one (1) forward slash
 
-**Good:**
 ```css
 /**
  *  Notice components should be used to showcase dismissible feedback to a user
  *  such as information, success, warning or error messages.
  */
-.notice {}
-```
-
-**Bad:**
-```css
-/* notice components should be used to showcase dismissible feedback to a user
-* such as information, success, warning or error messages */
-
 .notice {}
 ```
 
@@ -701,24 +548,12 @@ Reference subjects should:
 - Have each reference on a new line
 - Have the first letter of the reference text inline with one another
 
-**Good:**
 ```css
 /**
  *  Notice component description.
  *  
  *  @demo    http://www.example.com/notice/demo
  *  @author  Joe Mottershaw <https://www.github.com/joemottershaw>
- *  @version 0.1.0
- */
-.notice {}
-```
-
-**Bad:**
-```css
-/**
- *  Notice component description.
- *  @demo http://www.example.com/notice/demo
- *  @author Joe Mottershaw <https://www.github.com/joemottershaw>
  *  @version 0.1.0
  */
 .notice {}
@@ -767,7 +602,6 @@ When combining either of the SASS annotations, `{type}`, `$paramater` and the an
 - Use `{mixed}` for return types if different values could be returned
 - Use `{void}` for return types where nothing is returned
 
-**Good:**
 ```scss
 /**
  *  Mixin description.
@@ -775,29 +609,14 @@ When combining either of the SASS annotations, `{type}`, `$paramater` and the an
  *  @param  {mixed}  $second  The second description.
  *  @output                   The output description.
  */
+```
 
+```scss
 /**
  *  Function description.
  *  @param  {int}     $first   The first description.
  *  @param  {mixed}   $second  The second description.
  *  @return {string}           The return description.
- */
-```
-
-**Bad:**
-```scss
-/**
- *  Mixin description.
- *  @param {int} $first The first description
- *  @param {mixed} $second The second description
- *  @output The output description
- */
-
-/**
- *  Function description.
- *  @param {int} $first The first description
- *  @param {mixed} $second The second description
- *  @return {string} The return description
  */
 ```
 
@@ -816,7 +635,6 @@ Use [DocBlocks](#docblocks) to declare each number and their respective comments
 - Have one (1) space before the number label text
 - Have a capitalised first letter for the number label text
 
-**Good:**
 ```css
 /**
  *  Some information about this ruleset.
@@ -828,53 +646,10 @@ Use [DocBlocks](#docblocks) to declare each number and their respective comments
     height: auto; // [1]
     width: 100%; // [1]
     z-index: 10; // [2]
-}
-```
-
-**Bad:**
-```css
-/**
- *  Some information about this ruleset.
- *  1)Make the element responsive
- *  2)Force the element to stack higher
- */
-.selector {
-    height: auto; // [ 1 ]
-    width: 100%; // [ 1 ]
-    z-index: 10; // [ 2 ]
 }
 ```
 
 You should never mix inline comments and number labels. Once a number label is used, convert all current inline comments for that ruleset to number labels to keep the stylesheet clean and consistent.
-
-**Good:**
-```css
-/**
- *  Some information about this ruleset.
- *  
- *  1. Make the element responsive
- *  2. Force the element to stack higher
- */
-.selector {
-    height: auto; // [1]
-    width: 100%; // [1]
-    z-index: 10; // [2]
-}
-```
-
-**Bad:**
-```css
-/**
- *  Some information about this ruleset
- *  
- *  1. Make the element responsive
- */
-.selector {
-    height: auto; // [1]
-    width: 100%; // [1]
-    z-index: 10; // Force the element to stack higher
-}
-```
 
 #### Ordering
 Since there are many levels to a DocBlock depending on what the DocBlock is being used for, the above sections should be ordered as follows:
@@ -884,7 +659,6 @@ Since there are many levels to a DocBlock depending on what the DocBlock is bein
 - [Number Labels](#number-labels)
 - [Reference Subjects](#reference-subjects)
 
-**Example:**
 ```scss
 /**
  *  Mixin to make an element responsive and appear higher in the stack index.
@@ -918,7 +692,6 @@ Single line comments are typically used above a declaration, set of variables or
 - Have the subject matter on a new line
 - Coherently explain what we are doing
 
-**Good:**
 ```scss
 // Set the base colors
 $color-black: hsla(0, 100%, 0%, 1);
@@ -937,29 +710,6 @@ $color-white: hsla(0, 100$, 100%, 1);
 
     // Set the font color
     $font-color: $color-black;
-}
-```
-
-**Bad:**
-```scss
-// Colors
-
-$color-black: hsla(0, 100%, 0%, 1);
-$color-white: hsla(0, 100$, 100%, 1);
-
-
-@if ($variable == true) {
-    // Background
-    $background-color: $color-black;
-    // Font color
-    $font-color: $color-white;
-} @else {
-
-    // Background
-    $background-color: $color-white;
-    // Font color
-    $font-color: $color-black;
-
 }
 ```
 
