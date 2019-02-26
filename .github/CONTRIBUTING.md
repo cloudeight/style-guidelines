@@ -6,15 +6,12 @@
 3. [Pull Requests](#pull-requests)
 
 ## Introduction
-
 When contributing to this projects' repository, we ask that you first create a new issue to discuss the changes you wish to make and follow our Pull Request rules and Code of Conduct below.
 
 ## Issues
-
 When creating a new issue, use one of the templates provided if there are any. This helps resolve the issue in a much better time frame. If there are no templates or none of the templates are relevant to your issue, try and be as detailed as possible and provide as much information as you can and maybe recommend a new template that can be used for similar situations in the future.
 
 ## Pull Requests
-
 The same goes for pull requests, if a pull request template is provided, use that if you can, we also ask that you keep your code, documentation, version control and git commit summary and descriptions to the same standard and structure of the project. There are whole set of best practices and guidelines for various aspects of developing a project which can be found in this [style guidelines](https://github.com/cloudeight/style-guidelines) documentation project.
 
 We understand that each project is different and may require veering off the guidelines to some extent but we try and keep these guidelines as up to date, useful and relevant as possible.
