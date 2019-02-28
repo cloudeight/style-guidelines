@@ -1,3 +1,14 @@
+# February 28, 2019
+
+### Updated
+- Updated css guidelines
+    - Updated various aspects of the commenting section
+    - Updated examples
+
+
+-----
+
+
 # December 3, 2018
 
 ### Updated
