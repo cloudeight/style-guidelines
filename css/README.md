@@ -455,7 +455,7 @@ All of our stylesheets should include a heading or as mentioned above, individua
 
 - Have two (2) empty lines above
     - Unless it is the first heading of the stylesheet
-- Open with one (1) forward slash, one (1) asterisk, two (2) spaces and ninety two (72) equals signs
+- Open with one (1) forward slash, one (1) asterisk, two (2) spaces and seventy two (72) equals signs
     - Leaving 4 spaces at the end for the 80 character wide column limit
 - Have the heading text on a new line
 - Have four (4) spaces before the heading text
@@ -464,7 +464,7 @@ All of our stylesheets should include a heading or as mentioned above, individua
 - Use a hyphen and greater than sign for breadcrumb delimiters
 - Have a space either side of breadcrumb delimiters
 - Close on a new line
-- Close with four (4) spaces, ninety two (72) equals signs, two (2) spaces, one (1) asterisk and one (1) forward slash
+- Close with four (4) spaces, seventy two (72) equals signs, two (2) spaces, one (1) asterisk and one (1) forward slash
     - Using the 80 character wide column limit
 - Have one (1) empty line below
 
@@ -497,16 +497,17 @@ $notice-border-style: solid;
 Inline comments are short and concise and should:
 
 - Start on the same line as the subject matter
-- Start with two (2) forward slashes
+- Start with one (1) forward slash and one (1) asterisk
 - Have a single space before the forward slashes
-- Have a single space after the forward slashes
+- Have a single space after the asterisk
 - Have a capitalised first letter
 - Always be on one line
-- Coherently explain what we are doing
+- Coherently explain the subject matter
+- Close with one (1) asterisk and one (1) forward slash
 
 ```css
 .selector {
-    width: 100%; // Make the element responsive
+    width: 100%; /* Make the element responsive */
 }
 ```
 
@@ -518,7 +519,7 @@ A DocBlock comment is used when a detailed description or explanation is needed,
 
 - Open with one (1) forward slash and two (2) asterisk
 - Have the first line of text on a new line
-- Have each new line start with one (1) space, one (1) asterisk and two (2) spaces before the line of text
+- Have each new line start with one (1) space, one (1) asterisk and one (1) space before the line of text
 - Have each line of text wrap before the 80 character wide column limit
 - Have a capitalised first letter for descriptions
 - Have a full stop at the end of descriptions
@@ -527,8 +528,8 @@ A DocBlock comment is used when a detailed description or explanation is needed,
 
 ```css
 /**
- *  Notice components should be used to showcase dismissible feedback to a user
- *  such as information, success, warning or error messages.
+ * Notice components should be used to showcase dismissible feedback to a user
+ * such as information, success, warning or error messages.
  */
 .notice {}
 ```
@@ -550,11 +551,11 @@ Reference subjects should:
 
 ```css
 /**
- *  Notice component description.
- *  
- *  @demo    http://www.example.com/notice/demo
- *  @author  Joe Mottershaw <https://www.github.com/joemottershaw>
- *  @version 0.1.0
+ * Notice component description.
+ *
+ * @demo    http://www.example.com/notice/demo
+ * @author  Joe Mottershaw <https://www.github.com/joemottershaw>
+ * @version 0.1.0
  */
 .notice {}
 ```
@@ -566,24 +567,24 @@ DocBlocks can also include annotations for mixins and functions. These are known
 **`@param`:**
 ```css
 /**
- *  Function/mixin description.
- *  @param {type}  $parameter  The parameter description.
+ * Function/mixin description.
+ * @param {type}  $parameter  The parameter description.
  */
 ```
 
 **`@output`:**
 ```css
 /**
- *  Mixin description.
- *  @output A output description.
+ * Mixin description.
+ * @output A output description.
  */
 ```
 
 **`@return`:**
 ```css
 /**
- *  Function description.
- *  @return {type}  The return description.
+ * Function description.
+ * @return {type}  The return description.
  */
 ```
 
@@ -604,19 +605,19 @@ When combining either of the SASS annotations, `{type}`, `$paramater` and the an
 
 ```scss
 /**
- *  Mixin description.
- *  @param  {int}    $first   The first description.
- *  @param  {mixed}  $second  The second description.
- *  @output                   The output description.
+ * Mixin description.
+ * @param  {int}    $first   The first description.
+ * @param  {mixed}  $second  The second description.
+ * @output                   The output description.
  */
 ```
 
 ```scss
 /**
- *  Function description.
- *  @param  {int}     $first   The first description.
- *  @param  {mixed}   $second  The second description.
- *  @return {string}           The return description.
+ * Function description.
+ * @param  {int}     $first   The first description.
+ * @param  {mixed}   $second  The second description.
+ * @return {string}           The return description.
  */
 ```
 
@@ -637,15 +638,15 @@ Use [DocBlocks](#docblocks) to declare each number and their respective comments
 
 ```css
 /**
- *  Some information about this ruleset.
+ * Some information about this ruleset.
  *  
- *  1. Make the element responsive
- *  2. Force the element to stack higher
+ * 1. Make the element responsive
+ * 2. Force the element to stack higher
  */
 .selector {
-    height: auto; // [1]
-    width: 100%; // [1]
-    z-index: 10; // [2]
+    height: auto; /* [1] */
+    width: 100%; /* [1] */
+    z-index: 10; /* [2] */
 }
 ```
 
