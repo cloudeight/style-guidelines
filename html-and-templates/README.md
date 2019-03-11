@@ -4,8 +4,7 @@
 
 
 ## Table of Contents
-1. [Introduction](#introduction)
-2. [HTML](#html)
+1. [HTML](#html)
     - [Fundamentals](#fundamentals)
     - [Doctype](#doctype)
     - [Language](#language)
@@ -18,7 +17,7 @@
         - [Boolean Flags](#boolean-flags)
         - [Images](#images)
     - [Stylesheets and Scripts](#stylesheets-and-scripts)
-3. [Templates](#templates)
+2. [Templates](#templates)
     - [Variables](#variables)
         - [Output](#output)
         - [Filters](#filters)
@@ -29,19 +28,12 @@
         - [Form Elements](#form-elements)
         - [Variables, Filters and Functions](#variables-filters-and-functions)
         - [Exceptions](#exceptions)
-4. [Comments](#comments)
+3. [Comments](#comments)
     - [Single Line](#single-line)
     - [Multi-line](#multi-line)
     - [Inline](#inline)
     - [Template Equivalents](#template-equivalents)
 
-
-## Introduction
-This is a style guideline for HTML and templates that we use for projects at [cloudeight](https://github.com/cloudeight/) as part of our [style guidelines](https://github.com/cloudeight/style-guidelines) documentation project.
-
-It is in no way perfect or the definitively correct way to write changelogs for your projects and we're always happy for insights, feedback, improvements and recommendations to help improve it!
-
-Some projects written before this guideline may not follow it entirely or at all and there may be times when projects follow their own guidelines due to special use cases. Of course, these guidelines may be updated as and when needed.
 
 ## HTML
 ### Fundamentals
