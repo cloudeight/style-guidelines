@@ -4,8 +4,7 @@
 
 
 ## Table of Contents
-1. [Introduction](#introduction)
-2. [Semantic Versioning](#semantic-versioning)
+1. [Semantic Versioning](#semantic-versioning)
     - [What is semantic versioning?](#what-is-semantic-versioning)
     - [Rules](#rules)
     - [Version Components](#version-components)
@@ -13,19 +12,11 @@
         - [Minor](#minor)
         - [Major](#major)
     - [Exceptions](#exceptions)
-4. [Development](#development)
+2. [Development](#development)
     - [Where to start?](#where-to-start)
     - [Alpha Build](#alpha-build)
     - [Beta Build](#beta-build)
     - [Stable Release](#stable-release)
-
-
-## Introduction
-This is a style guideline for version control that we use for projects at [cloudeight](https://github.com/cloudeight/) as part of our [style guidelines](https://github.com/cloudeight/style-guidelines) documentation project.
-
-It is in no way perfect or the definitively correct way to version control your projects and we're always happy for insights, feedback, improvements and recommendations to help build on it!
-
-Some projects written before this guideline may not follow it entirely or at all and there may be times when projects follow their own guidelines due to special use cases. Of course, these guidelines may be updated as and when needed.
 
 
 ## Semantic Versioning
