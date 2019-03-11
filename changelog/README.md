@@ -31,7 +31,7 @@ Although every project differs, a general guideline is to keep everything as hum
 6. Fixed
 7. Release Notes
 
-Under each group, use bullet points for each item using: "Added", "Updated", "Removed" and "Fixed", in a similar fashion to our [Git](https://github.com/cloudeight/style-guidelines/tree/master/git) guidelines but with the non-imperative. If an issue was resolved or closed because of a commit, always link to the issue in parenthesis at the end of the bullet point for easy referencing.
+Under each group, use bullet points for each item using: "Added", "Updated", "Removed" and "Fixed", in a similar fashion to the [Git](https://github.com/joemottershaw/style-guidelines/tree/master/git) guidelines but with the non-imperative. If an issue was resolved or closed because of a commit, always link to the issue in parenthesis at the end of the bullet point for easy referencing.
 
 Release notes can be added at the end detailing specific note-worthy additions or developer messages.
 

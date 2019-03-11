@@ -172,7 +172,7 @@ Here is a list of all the constraints and their corresponding character suffixes
 
 
 ## Character Encoding
-This section is not necessarily for the general public to follow unless you wish to, this is more of a reference for [cloudeight](https://github.com/cloudeight) in-house projects. Here at [cloudeight](https://github.com/cloudeight) we predominantly use the following character encoding:
+This section is not necessarily for the general public to follow unless you wish to, this is more of a reference for in-house projects. I predominantly use the following character encoding:
 
 - Character Set: `utf8mb4`
 - Collation: `utf8mb4_unicode_ci`
@@ -181,7 +181,7 @@ Obviously this can be adjusted on a per project basis but it is a good starting 
 
 
 ## Dates
-Just like the [character encoding](#character-encoding), this is more of a reference for [cloudeight](https://github.com/cloudeight) in-house projects.
+Just like the [character encoding](#character-encoding), this is more of a reference for in-house projects.
 
 We include a `created_at`, `updated_at` and `deleted_at` column on every table, with the exception of [map/pivot tables](#mappivot-tables). Each of these columns is stored using the `TIMESTAMP` datatype. These columns  allow us to have a reference of when the row was inserted and updated. The `deleted_at` column is used at times when we don't want to completely remove an entry from a table, this is called soft deletion or soft deleting.
 
@@ -191,4 +191,4 @@ Obviously this can be adjusted on a per project basis but it is a good starting 
 
 
 ## SQL
-Now that we have established naming conventions and structuring of our databases, it would be a good time to follow on from this by reading our SQL style guidelines. However, unfortunately this part of our style guidelines is still a work in progress and should hopefully be published soon.
+Now that we have established naming conventions and structuring of our databases, it would be a good time to follow on from this by reading our SQL style guidelines. However, unfortunately this part of the style guidelines is still a work in progress and should hopefully be published soon.

@@ -297,7 +297,7 @@ Unlike [size modifiers](#size-modifiers) and [color modifiers](#color-modifiers)
 ```
 
 ## SASS
-Since we use SASS in all of our projects and given the popularity of SASS, we should always try our best to seamlessly place SASS within our CSS stylesheet while following the above guidelines.
+Given the popularity of SASS, we should always try our best to seamlessly place SASS within CSS stylesheet while following the above guidelines.
 
 ### Variables
 SASS variables do not need to follow that of the [BEM](#bem) methodology and structuring, but should:

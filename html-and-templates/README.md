@@ -90,7 +90,7 @@ Always declare the character set in each of your HTML documents, this ensures co
 ```
 
 ### Viewport
-In most of our projects we tend to use the same viewport settings, however, some projects will obviously require different needs, but for the majority of our projects we use:
+For the majority of projects, this is a good starting point:
 
 ```html
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -190,7 +190,7 @@ When including stylesheets and scripts, with HTML5 there is no need to specify a
 
 
 ## Templates
-There are many template engines available, each having their own pro's and con's depending on your preferences. However, here at [cloudeight](https://github.com/cloudeight) we predominantly use [Twig](https://twig.symfony.com/) ([Symfony](https://symfony.com/)) in our own in house PHP MVC framework as well as [Timber](https://www.upstatement.com/timber/) for our WordPress projects. However, the main principles should apply to most other template engines such as the [Blade](https://laravel.com/docs/blade) or [Smarty](https://www.smarty.net/).
+There are many template engines available, each having their own pro's and con's depending on your preferences. I predominantly use [Twig](https://twig.symfony.com/) ([Symfony](https://symfony.com/)) with my own in house PHP MVC framework as well as [Timber](https://www.upstatement.com/timber/) for my WordPress projects. However, the main principles should apply to most other template engines such as the [Blade](https://laravel.com/docs/blade) or [Smarty](https://www.smarty.net/).
 
 ### Variables
 Variables allow us to output data from a controller in an MVC architecture or set variables within the template itself.
@@ -207,7 +207,7 @@ Variables in their basic form, as mentioned above, output data, they should:
 {{ var.foo }}
 ```
 
-Refer to our [variable naming conventions](#variables-1) for more on naming your variables.
+Refer to the [variable naming conventions](#variables-1) for more on naming your variables.
 
 #### Filters
 Filters allow us to manipulate and format the output of a variable, they should:
@@ -237,7 +237,7 @@ There maybe cases where an array of data can be passed to a filter, when this si
 {{ "I like %this% and %that%."|replace(array) }}
 ```
 
-Refer to our [filter naming conventions](#variables-2) for more on naming your custom filters.
+Refer to the [filter naming conventions](#variables-2) for more on naming your custom filters.
 
 ### Functions
 Functions can be used to generate content, they should:
@@ -253,7 +253,7 @@ Functions can be used to generate content, they should:
 {% endif %}
 ```
 
-Refer to our [function naming conventions](#functions-2) for more on naming your custom functions.
+Refer to the [function naming conventions](#functions-2) for more on naming your custom functions.
 
 ### Expressions
 Expression tags allow us to set variables, loop through arrays and test conditionals. They should:
