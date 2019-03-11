@@ -1,5 +1,14 @@
 # Novemeber 20, 2018
 
+### Removed
+- Removed introduction section
+
+
+-----
+
+
+# Novemeber 20, 2018
+
 ### Updated
 - Updated guidelines section
 - Updated example section
