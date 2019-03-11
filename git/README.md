@@ -4,23 +4,14 @@
 
 
 ## Table of Contents
-1. [Introduction](#introduction)
-2. [Best Practices](#best-practices)
+1. [Best Practices](#best-practices)
     - [Concise Commits](#concise-commits)
     - [Commit Often](#commit-often)
     - [Use Branches](#use-branches)
-3. [Git Commit Fields](#git-commit-fields)
+2. [Git Commit Fields](#git-commit-fields)
     - [Summary](#summary)
     - [Description](#description)
-4. [Example](#example)
-
-
-## Introduction
-This is a style guideline for documenting a git commit summary and description that we use for projects at [cloudeight](https://github.com/cloudeight/) as part of our [style guidelines](https://github.com/cloudeight/style-guidelines) documentation project.
-
-It is in no way perfect or the definitively correct way to document your projects git commit summary and description and we're always happy for insights, feedback, improvements and recommendations to help improve it!
-
-Some projects written before this guideline may not follow it entirely or at all and there may be times when projects follow their own guidelines due to special use cases. Of course, these guidelines may be updated as and when needed.
+3. [Example](#example)
 
 
 ## Best Practices
