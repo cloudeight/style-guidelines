@@ -4,21 +4,12 @@
 
 
 ## Table of Contents
-1. [Introduction](#introduction)
-2. [Changelog](#changelog)
+1. [Changelog](#changelog)
     - [What is a changelog?](#what-is-a-changelog)
     - [Why keep a changelog?](#why-keep-a-changelog)
-4. [Guidelines](#guidelines)
-5. [Roadmap](#roadmap)
-6. [Example](#example)
-
-
-## Introduction
-This is a style guideline for changelogs that we use for projects at [cloudeight](https://github.com/cloudeight/) as part of our [style guidelines](https://github.com/cloudeight/style-guidelines) documentation project.
-
-It is in no way perfect or the definitively correct way to write changelogs for your projects and we're always happy for insights, feedback, improvements and recommendations to help improve it!
-
-Some projects written before this guideline may not follow it entirely or at all and there may be times when projects follow their own guidelines due to special use cases. Of course, these guidelines may be updated as and when needed.
+2. [Guidelines](#guidelines)
+3. [Roadmap](#roadmap)
+4. [Example](#example)
 
 
 ## Changelog
