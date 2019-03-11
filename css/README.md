@@ -3,15 +3,14 @@
 <br />
 
 ## Table of Contents
-1. [Introduction](#introduction)
-2. [Foundation](#foundation)
-3. [Syntax and Formatting](#syntax-and-formatting)
+1. [Foundation](#foundation)
+2. [Syntax and Formatting](#syntax-and-formatting)
     - [Fundamentals](#fundamentals)
     - [Extended](#extended)
     - [Shorthand vs Longhand](#shorthand-vs-longhand)
     - [Multi-line Property Values](#multi-line-property-values)
     - [Vendor Prefixes](#vendor-prefixes)
-4. [Naming Conventions](#naming-conventions)
+3. [Naming Conventions](#naming-conventions)
     - [File Names](#file-names)
     - [BEM](#bem)
     - [Hooks](#hooks)
@@ -21,14 +20,14 @@
         - [Size Modifiers](#size-modifiers)
         - [Color Modifiers](#color-modifiers)
         - [Feedback Modifiers](#feedback-modifiers)
-5. [SASS](#sass)
+4. [SASS](#sass)
     - [Variables](#variables)
     - [Maps](#maps)
     - [Mixins and Functions](#mixins-and-functions)
     - [Declaration Order](#declaration-order)
     - [Conditional Statements](#conditional-statements)
     - [Partials](#partials)
-6. [Commenting](#commenting)
+5. [Commenting](#commenting)
     - [Headings](#headings)
     - [Inline](#inline)
     - [DocBlocks](#docblocks)
@@ -38,15 +37,7 @@
         - [Number Labels](#number-labels)
         - [Ordering](#ordering)
     - [Single Line](#single-line)
-7. [Attributions](#attributions)
-
-
-## Introduction
-This is a style guideline for CSS that we use for projects at [cloudeight](https://github.com/cloudeight/) as part of our [style guidelines](https://github.com/cloudeight/style-guidelines) documentation project.
-
-It is in no way perfect or the definitively correct way to write CSS for your projects and we're always happy for insights, feedback, improvements and recommendations to help improve it!
-
-Some projects written before this guideline may not follow it entirely or at all and there may be times when projects follow their own guidelines due to special use cases. Of course, these guidelines may be updated as and when needed.
+6. [Attributions](#attributions)
 
 
 ## Foundation
