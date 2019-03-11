@@ -7,7 +7,7 @@
 2. [Attribution](#attribution)
 
 ## Code of Conduct
-We aim to create an open and welcoming environment to all developers of all skill levels within all our projects.
+Aim to create an open and welcoming environment to all developers of all skill levels within any project.
 
 ### Do
   - Use friendly and welcoming language.
@@ -20,7 +20,7 @@ We aim to create an open and welcoming environment to all developers of all skil
   - Make personal or political attacks to other users.
   - Publish others' private information without explicit permission.
 
-Any use of unacceptable behavior should be reported to a team member. All complaints will be reviewed and investigated and will result in a response that is deemed necessary and appropriate to the circumstances.
+Any use of unacceptable behavior should be reported. All complaints will be reviewed and investigated and will result in a response that is deemed necessary and appropriate to the circumstances.
 
 ## Attribution
 This Code of Conduct is adapted from the [Contributor Covenant](http://contributor-covenant.org/version/1/4/).
