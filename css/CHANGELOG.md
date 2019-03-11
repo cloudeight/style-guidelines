@@ -1,3 +1,12 @@
+# March 11, 2019
+
+### Removed
+- Removed introduction section
+
+
+-----
+
+
 # February 28, 2019
 
 ### Updated
