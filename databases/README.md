@@ -4,8 +4,7 @@
 
 
 ## Table of Contents
-1. [Introduction](#introduction)
-2. [Naming Conventions](#naming-conventions)
+1. [Naming Conventions](#naming-conventions)
     - [General](#general)
     - [Tables](#tables)
     - [Columns](#columns)
@@ -13,17 +12,9 @@
     - [Foreign Keys](#foreign-keys)
     - [Map/Pivot Tables](#mappivot-tables)
     - [Constraints](#constraints)
-3. [Character Encoding](#character-encoding)
-4. [Dates](#dates)
-5. [SQL](#sql)
-
-
-## Introduction
-This is a style guideline for version control that we use for projects at [cloudeight](https://github.com/cloudeight/) as part of our [style guidelines](https://github.com/cloudeight/style-guidelines) documentation project.
-
-It is in no way perfect or the definitively correct way to structure your databases in your projects and we're always happy for insights, feedback, improvements and recommendations to help build on it!
-
-Some projects written before this guideline may not follow it entirely or at all and there may be times when projects follow their own guidelines due to special use cases. Of course, these guidelines may be updated as and when needed.
+2. [Character Encoding](#character-encoding)
+3. [Dates](#dates)
+4. [SQL](#sql)
 
 
 ## Naming Conventions
